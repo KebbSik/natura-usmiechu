@@ -1,42 +1,102 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@import "tailwindcss";
 
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@theme {
+  --color-primary: #486892;
+  --color-secondary-D: #c8d3db;
+  --color-secondary-L: #f3f3f3;
+  --color-social: #7d8894;
+  --color-footer: #ebebeb;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@layer base {
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl
+           font-semibold
+           leading-tight;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl
+           font-medium
+           leading-snug;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl lg:text-3xl
+           font-medium
+           leading-snug;
+  }
+
+  h4 {
+    @apply text-lg md:text-xl lg:text-2xl
+           font-medium;
+  }
+
+  h5 {
+    @apply text-base md:text-lg
+           font-medium;
+  }
+
+  h6 {
+    @apply text-sm md:text-base
+           font-medium;
+  }
+
+  p {
+    @apply text-base md:text-lg
+           leading-relaxed;
+  }
+
+  span {
+    @apply text-base;
+  }
+
+  small {
+    @apply text-sm;
+  }
+
+  a {
+    @apply text-primary underline-offset-4
+           hover:underline;
+  }
+
+  button {
+    @apply font-medium
+           text-sm md:text-base
+           leading-none
+           tracking-wide;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .flex-center-x {
+    @apply flex justify-center;
+  }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  .flex-center-y {
+    @apply flex items-center;
+  }
+  .icon-size {
+    @apply w-8 h-8;
+  }
+
+  .btn {
+    @apply flex items-center bg-secondary-D px-4 py-1 rounded-full;
+  }
+
+  .btn-outline {
+    @apply bg-white border-3 border-secondary-D;
   }
 }
