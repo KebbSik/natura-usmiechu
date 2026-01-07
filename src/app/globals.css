@@ -62,8 +62,7 @@ body {
   }
 
   a {
-    @apply text-primary underline-offset-4
-           hover:underline;
+    @apply text-black;
   }
 
   button {
@@ -77,6 +76,11 @@ body {
 @layer components {
   .container {
     @apply max-w-7xl mx-auto;
+  }
+  .section-padding {
+    @apply px-4 py-16
+           md:px-8 md:py-20
+           lg:px-12 lg:py-24;
   }
   .flex-center {
     @apply flex justify-center items-center;
@@ -98,5 +102,12 @@ body {
 
   .btn-outline {
     @apply bg-white border-3 border-secondary-D;
+  }
+  .testimonial-card {
+    @apply bg-white border-1 border-primary rounded-xl p-6 flex flex-col justify-between;
+  }
+
+  .img-radius {
+    @apply rounded-sm;
   }
 }

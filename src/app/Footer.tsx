@@ -12,7 +12,7 @@ const Footer = () => {
             <Link
               href="/"
               aria-label="Strona główna"
-              className="flex  relative w-50 h-20"
+              className="relative flex w-48 h-20"
             >
               <Image src="/logo/Logo_2.svg" alt="logo" fill></Image>
             </Link>
