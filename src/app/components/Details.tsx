@@ -30,7 +30,14 @@ const rotationMap: Record<number, string> = {
 
 const Details = () => {
   return (
-    <section className="section-padding">
+    <section
+      className="section-padding 
+    bg-linear-to-tr
+    from-secondary-L
+    via-secondary-L
+    to-secondary-D
+    "
+    >
       <div className="container">
         {/* HEADER */}
         <header className="mb-14 text-center">

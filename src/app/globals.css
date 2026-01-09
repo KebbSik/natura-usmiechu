@@ -97,11 +97,11 @@ body {
   }
 
   .btn {
-    @apply flex items-center bg-secondary-D px-4 py-1 rounded-full;
+    @apply flex items-center bg-primary text-white px-4 py-1 rounded-full;
   }
 
   .btn-outline {
-    @apply bg-white border-3 border-secondary-D;
+    @apply bg-white border-3 text-black border-primary;
   }
   .testimonial-card {
     @apply bg-white border-1 border-primary rounded-xl p-6 flex flex-col justify-between;
