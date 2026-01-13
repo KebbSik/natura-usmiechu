@@ -41,17 +41,18 @@ const Categories = [
     link: "/oferta/radiologia",
   },
 ];
+
+const data = {
+  heading: "Zadbaj o zdrowy i piękny uśmiech",
+  paragraph: "Korzystaj z profesjonalnych usług dopasowanych do Twoich potrzeb",
+};
+
 const Offer = () => {
   return (
     <>
       <section className="container">
         <div className="flex flex-col items-center m-10 ">
-          <Title
-            heading={"Zadbaj o zdrowy i piękny uśmiech"}
-            description={
-              "Korzystaj z profesjonalnych usług dopasowanych do Twoich potrzeb"
-            }
-          ></Title>
+          <Title heading={data.heading} description={data.paragraph}></Title>
           <div className="flex flex-wrap gap-10 justify-center mt-20">
             {/* To jest kontener na Linki do podstron oferty */}
             {Categories.map((category) => (

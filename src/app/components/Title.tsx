@@ -1,6 +1,6 @@
 type TitleProps = {
   heading: string;
-  description: string;
+  description?: string;
 };
 
 export default function Title({ heading, description }: TitleProps) {
