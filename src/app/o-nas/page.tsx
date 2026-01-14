@@ -4,7 +4,7 @@ import Title from "../components/Title";
 import EmployeeCard from "../components/EmployeeCard";
 
 const data = {
-  heading: "O nas",
+  heading: "Poznajmy się bliżej",
 };
 
 const employeeList = [
@@ -34,9 +34,11 @@ const AboutUs = () => {
   return (
     <section>
       <Header imageUrl="headers/header.png">O nas</Header>
-      <div className="container">
-        <Title heading={data.heading}></Title>
-        {/* Miejsce na pierwsza część sekjji "poznajmy się bliżej" */}
+      <div className="container ">
+        <div className="flex flex-col items-center">
+          <Title heading={data.heading}></Title>
+          {/* Miejsce na pierwsza część sekjji "poznajmy się bliżej" */}
+        </div>
       </div>
       <EmployeeCard employees={employeeList}></EmployeeCard>
     </section>

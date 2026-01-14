@@ -51,7 +51,7 @@ const Offer = () => {
   return (
     <>
       <section className="container">
-        <div className="flex flex-col items-center m-10 ">
+        <div className="flex flex-col items-center">
           <Title heading={data.heading} description={data.paragraph}></Title>
           <div className="flex flex-wrap gap-10 justify-center mt-20">
             {/* To jest kontener na Linki do podstron oferty */}

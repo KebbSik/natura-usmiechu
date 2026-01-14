@@ -55,19 +55,172 @@ const data = [
   },
   {
     id: 2,
-    title: "Profilaktyka",
+    title: "Stomatologia zachowawcza",
     content: [
-      { name: "Przegląd stomatologiczny", price: "100" },
-      { name: "Skaling", price: "200" },
-      { name: "Piaskowanie", price: "180" },
+      {
+        name: "Badanie stomatologiczne / wizyta adaptacyjna / porada lekarska",
+        price: "150",
+      },
+      {
+        name: "Znieczulenie stomatologiczne",
+        price: "Gratis",
+      },
+      {
+        name: "Wypełnienie kompozytowe przyszyjkowe",
+        price: "300–400",
+      },
+      {
+        name: "Wypełnienie kompozytowe w zębie stałym",
+        price: "400–500",
+      },
+      {
+        name: "Licówka kompozytowa / bonding (jeden ząb)",
+        price: "550–650",
+      },
+      {
+        name: "Opatrunek leczniczy",
+        price: "250",
+      },
+      {
+        name: "Wizyta przeciwbólowa",
+        price: "250",
+      },
     ],
   },
   {
     id: 3,
-    title: "Leczenie",
+    title: "Stomatologia zachowawcza",
     content: [
-      { name: "Wypełnienie", price: "250" },
-      { name: "Leczenie kanałowe", price: "900" },
+      {
+        name: "Badanie stomatologiczne / wizyta adaptacyjna / porada lekarska",
+        price: "150",
+      },
+      {
+        name: "Znieczulenie stomatologiczne",
+        price: "Gratis",
+      },
+      {
+        name: "Wypełnienie kompozytowe przyszyjkowe",
+        price: "300–400",
+      },
+      {
+        name: "Wypełnienie kompozytowe w zębie stałym",
+        price: "400–500",
+      },
+      {
+        name: "Licówka kompozytowa / bonding (jeden ząb)",
+        price: "550–650",
+      },
+      {
+        name: "Opatrunek leczniczy",
+        price: "250",
+      },
+      {
+        name: "Wizyta przeciwbólowa",
+        price: "250",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Stomatologia zachowawcza",
+    content: [
+      {
+        name: "Badanie stomatologiczne / wizyta adaptacyjna / porada lekarska",
+        price: "150",
+      },
+      {
+        name: "Znieczulenie stomatologiczne",
+        price: "Gratis",
+      },
+      {
+        name: "Wypełnienie kompozytowe przyszyjkowe",
+        price: "300–400",
+      },
+      {
+        name: "Wypełnienie kompozytowe w zębie stałym",
+        price: "400–500",
+      },
+      {
+        name: "Licówka kompozytowa / bonding (jeden ząb)",
+        price: "550–650",
+      },
+      {
+        name: "Opatrunek leczniczy",
+        price: "250",
+      },
+      {
+        name: "Wizyta przeciwbólowa",
+        price: "250",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Stomatologia zachowawcza",
+    content: [
+      {
+        name: "Badanie stomatologiczne / wizyta adaptacyjna / porada lekarska",
+        price: "150",
+      },
+      {
+        name: "Znieczulenie stomatologiczne",
+        price: "Gratis",
+      },
+      {
+        name: "Wypełnienie kompozytowe przyszyjkowe",
+        price: "300–400",
+      },
+      {
+        name: "Wypełnienie kompozytowe w zębie stałym",
+        price: "400–500",
+      },
+      {
+        name: "Licówka kompozytowa / bonding (jeden ząb)",
+        price: "550–650",
+      },
+      {
+        name: "Opatrunek leczniczy",
+        price: "250",
+      },
+      {
+        name: "Wizyta przeciwbólowa",
+        price: "250",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Stomatologia zachowawcza",
+    content: [
+      {
+        name: "Badanie stomatologiczne / wizyta adaptacyjna / porada lekarska",
+        price: "150",
+      },
+      {
+        name: "Znieczulenie stomatologiczne",
+        price: "Gratis",
+      },
+      {
+        name: "Wypełnienie kompozytowe przyszyjkowe",
+        price: "300–400",
+      },
+      {
+        name: "Wypełnienie kompozytowe w zębie stałym",
+        price: "400–500",
+      },
+      {
+        name: "Licówka kompozytowa / bonding (jeden ząb)",
+        price: "550–650",
+      },
+      {
+        name: "Opatrunek leczniczy",
+        price: "250",
+      },
+      {
+        name: "Wizyta przeciwbólowa",
+        price: "250",
+      },
     ],
   },
 ];
@@ -103,7 +256,7 @@ function AccordionItem({
         </div>
       </div>
       <div
-        className={`  px-2 mx-3 overflow-hidden transition-all duration-400 ${
+        className={`  md:px-4 overflow-hidden transition-all duration-400 ${
           isExpanded ? "max-h-200 " : "max-h-0 "
         }`}
       >
@@ -118,7 +271,10 @@ function AccordionItem({
           </thead>
           <tbody>
             {content.map((el) => (
-              <tr className="odd:bg-white odd:border odd:border-secondary-L even:bg-secondary-L ">
+              <tr
+                key={el.name}
+                className="odd:bg-white odd:border odd:border-secondary-L even:bg-secondary-L "
+              >
                 <td className="p-1.5">{el.name}</td>
                 <td className="text-center">{el.price}</td>
               </tr>
@@ -136,21 +292,25 @@ const PriceList = () => {
   };
 
   return (
-    <div>
+    <section className="min-h-screen mb-10">
       <Header imageUrl="headers/header.png">Cennik</Header>
-      <Title heading={"Zapoznaj się z naszym cennikiem"}></Title>
-      <div className="flex flex-col gap-1 max-w-md mx-auto">
-        {data.map((item) => (
-          <AccordionItem
-            key={item.id}
-            title={item.title}
-            content={item.content}
-            isExpended={expandedId === item.id ? true : false}
-            onToggle={() => toggleExpand(item.id)}
-          />
-        ))}
+      <div className="container">
+        <div className="flex flex-col items-center px-3">
+          <Title heading={"Zapoznaj się z naszym cennikiem"}></Title>
+          <div className="flex flex-col gap-1  mx-auto">
+            {data.map((item) => (
+              <AccordionItem
+                key={item.id}
+                title={item.title}
+                content={item.content}
+                isExpended={expandedId === item.id ? true : false}
+                onToggle={() => toggleExpand(item.id)}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

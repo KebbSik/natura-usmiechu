@@ -1,10 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import EnvelopeIcon from "./components/svgs/EnvelopeIcon";
+import PinIcon from "./components/svgs/PinIcon";
+import PhoneIcon from "./components/svgs/PhoneIcon";
 
 const Footer = () => {
   return (
-    <footer className="   bg-footer py-12">
+    <footer className="   bg-footer py-5">
       <div className="container">
         <div className=" flex flex-col md:flex-row  md:flex-wrap gap-y-10">
           <section className=" flex flex-col items-center md:w-1/2">
@@ -62,19 +65,19 @@ const Footer = () => {
           {/* Dane kontaktowe */}
           <section className="md:w-1/2">
             <address className="flex justify-center">
-              <ul className="grid  grid-cols-[auto_1fr] gap-x-2 gap-y-2">
+              <ul className="grid  grid-cols-[auto_1fr] gap-x-2 gap-y-2 items-center">
                 <li className="contents">
-                  <img className="icon-size" src="/icons/phone.svg" alt="" />
+                  <PhoneIcon className="text-black" width={24} height={24} />{" "}
                   <a href="tel:+48123123123">+48 123 123 123</a>
                 </li>
 
                 <li className="contents">
-                  <img className="icon-size" src="/icons/envelope.svg" alt="" />
+                  <EnvelopeIcon className="text-black" width={24} height={24} />
                   <a href="mailto:kontakt@firma.pl">kontakt@firma.pl</a>
                 </li>
 
                 <li className="contents">
-                  <img className="icon-size" src="/icons/location.svg" alt="" />
+                  <PinIcon className="text-black" width={24} height={24} />
                   <span>
                     ul. Przykładowa 12,
                     <br />
@@ -84,14 +87,13 @@ const Footer = () => {
               </ul>
             </address>
           </section>
-
-          {/* Copyrights */}
-          <section className="w-full">
-            <p className="text-wrap text-center text-xs text-gray-500">
-              © Copyright 2025 naturausmiechu.pl Created by Kevin Sarfo
-            </p>
-          </section>
         </div>
+        {/* Copyrights */}
+        <section className="w-full mt-5">
+          <p className="text-wrap text-center text-xs text-gray-500">
+            © Copyright 2025 naturausmiechu.pl Created by Kevin Sarfo
+          </p>
+        </section>
       </div>
     </footer>
   );

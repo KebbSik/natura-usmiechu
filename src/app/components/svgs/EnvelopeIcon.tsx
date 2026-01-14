@@ -1,0 +1,26 @@
+import { SVGProps } from "react";
+
+const SvgComponent = ({
+  width = 24,
+  height = 24,
+  filled = false,
+  ...props
+}: SVGProps<SVGSVGElement> & {
+  width?: number | string;
+  height?: number | string;
+  filled?: boolean;
+}) => (
+  <svg
+    width={width}
+    height={height}
+    viewBox="-20 0 552 512"
+    fill={filled ? "currentColor" : "none"}
+    stroke="currentColor"
+    strokeWidth={25}
+    {...props}
+  >
+    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z" />
+  </svg>
+);
+
+export default SvgComponent;
