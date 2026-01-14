@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="sticky top-0 border bg-white px-6 flex h-16 justify-between items-center z-50 ">
+      <div className="sticky top-0 border-b border-secondary-D  bg-white px-6 flex h-16 justify-between items-center z-50 ">
         {/* Logo */}
         <Link href="/" aria-label="Strona główna">
           <Image

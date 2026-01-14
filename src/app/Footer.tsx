@@ -24,7 +24,12 @@ const Footer = () => {
             <nav aria-label="Social media">
               <ul className="flex justify-center items-center gap-2">
                 <li className="">
-                  <a href="https://www.facebook.com" aria-label="Facebook">
+                  <a
+                    href="https://www.facebook.com/naturausmiechu/?locale=pl_PL"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img
                       className="icon-size bg-social rounded-full p-1 "
                       src="/icons/facebook.svg"
@@ -32,17 +37,14 @@ const Footer = () => {
                     />
                   </a>
                 </li>
+
                 <li className="bg-social rounded-full ">
-                  <a href="https://www.instagram.com" aria-label="Instagram">
-                    <img
-                      className="icon-size bg-social rounded-full p-1 "
-                      src="/icons/instagram.svg"
-                      alt="instagram"
-                    />
-                  </a>
-                </li>
-                <li className="bg-social rounded-full ">
-                  <a href="/" aria-label="">
+                  <a
+                    href="https://www.znanylekarz.pl/placowki/natura-usmiechu-gabinet-stomatologiczny"
+                    aria-label="znany lekarz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img
                       className="icon-size bg-social rounded-full p-1 "
                       src="/icons/star.svg"

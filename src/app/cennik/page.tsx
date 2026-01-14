@@ -234,7 +234,7 @@ function AccordionItem({
   return (
     <>
       <div
-        className={`bg-white rounded-full overflow-hidden  border border-primary/60 transition-all duration-300 
+        className={`bg-white rounded-full overflow-hidden  border border-primary/60 transition-all duration-normal
          `}
       >
         <div
@@ -242,13 +242,13 @@ function AccordionItem({
           onClick={onToggle}
         >
           <div className="text-l px-3 ">{title}</div>
-          <div className="flex items-center">
+          <div className="flex items-center  select-none">
             <Image
               src={`${isExpanded ? "/icons/minus.png" : "/icons/add.png"}`}
               alt="Rozwiń"
               width={20}
               height={20}
-              className={`transition-transform duration-300 ${
+              className={`transition-all duration-normal ${
                 isExpanded ? "rotate-180" : ""
               }`}
             />
@@ -256,7 +256,7 @@ function AccordionItem({
         </div>
       </div>
       <div
-        className={`  md:px-4 overflow-hidden transition-all duration-400 ${
+        className={`  md:px-4 overflow-hidden transition-all duration-slow ${
           isExpanded ? "max-h-200 " : "max-h-0 "
         }`}
       >
@@ -266,7 +266,9 @@ function AccordionItem({
               <th className="text-start p-1.5" scope="col">
                 Nazwa
               </th>
-              <th scope="col">Cena</th>
+              <th className="p-1.5" scope="col">
+                Cena
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -276,7 +278,7 @@ function AccordionItem({
                 className="odd:bg-white odd:border odd:border-secondary-L even:bg-secondary-L "
               >
                 <td className="p-1.5">{el.name}</td>
-                <td className="text-center">{el.price}</td>
+                <td className="text-center text-nowrap p-1.5">{el.price}</td>
               </tr>
             ))}
           </tbody>
@@ -288,7 +290,15 @@ function AccordionItem({
 const PriceList = () => {
   const [expandedId, setExpandedId] = useState<number | null>(null);
   const toggleExpand = (id: number) => {
-    setExpandedId(expandedId === id ? null : id);
+    if (expandedId === id) {
+      setExpandedId(null);
+    } else {
+      setExpandedId(null);
+      // setTimeout(() => {
+      setExpandedId(id);
+      // }, 100);
+    }
+    // setExpandedId(expandedId === id ? null : id);
   };
 
   return (

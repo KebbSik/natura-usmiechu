@@ -41,7 +41,7 @@ const config: Config = {
       smooth: "cubic-bezier(0.4, 0, 0.2, 1)",
     },
     transitionDuration: {
-      fast: "150ms",
+      fast: "75ms",
       normal: "300ms",
       slow: "500ms",
     },

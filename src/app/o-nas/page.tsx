@@ -9,25 +9,60 @@ const data = {
 
 const employeeList = [
   {
-    name: "Joanna Kowalczyk",
+    name: "Joanna Kowalczyk8",
     role: "Lekarz dentysta",
     description:
       "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.s",
-    photo: "/employees/female.png",
+    photo: "/employees/8.avif",
   },
   {
-    name: "Jan Kowalczyk",
+    name: "Jan Kowalczyk7",
     role: "Lekarz dentysta",
     description:
       "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.s",
-    photo: "/employees/male.png",
+    photo: "/employees/7.avif",
+  },
+  {
+    name: "Jan Kowalczyk6",
+    role: "Lekarz dentysta",
+    description:
+      "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.s",
+    photo: "/employees/6.avif",
+  },
+  {
+    name: "Jan Kowalczyk5",
+    role: "Lekarz dentysta",
+    description:
+      "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.s",
+    photo: "/employees/5.avif",
+  },
+  {
+    name: "Jan Kowalczyk4",
+    role: "Lekarz dentysta",
+    description:
+      "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.s",
+    photo: "/employees/4.avif",
+  },
+  {
+    name: "Jan Kowalczyk3",
+    role: "Lekarz dentysta",
+    description:
+      "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.s",
+    photo: "/employees/3.avif",
+  },
+  {
+    name: "Jan Kowalczyk2",
+    role: "Lekarz dentysta",
+    description:
+      "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.s",
+    photo: "/employees/2.avif",
   },
   {
     name: "Jan Kowalczyk1",
     role: "Lekarz dentysta",
     description:
       "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.s",
-    photo: "/employees/male.png",
+    photo: "/employees/1.avif",
   },
 ];
 const AboutUs = () => {
@@ -40,7 +75,9 @@ const AboutUs = () => {
           {/* Miejsce na pierwsza część sekjji "poznajmy się bliżej" */}
         </div>
       </div>
-      <EmployeeCard employees={employeeList}></EmployeeCard>
+      <div className="container max-w-370">
+        <EmployeeCard employees={employeeList}></EmployeeCard>
+      </div>
     </section>
   );
 };

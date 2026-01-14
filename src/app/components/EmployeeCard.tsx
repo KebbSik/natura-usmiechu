@@ -22,19 +22,19 @@ const EmployeeCard = ({ employees }: EmployeesList) => {
       {employees.map((employee) => (
         <article
           key={employee.name}
-          className="md:flex justify-between gap-15 my-10"
+          className="flex flex-col  md:flex-row md:even:flex-row-reverse items-center justify-start  gap-5 md:gap-15 my-10"
         >
-          <div className="relative w-full md:max-w-70 border-3 border-primary aspect-square overflow-hidden ">
+          <div className="relative min-w-50 w-full max-w-90 md:max-w-70 rounded-2xl aspect-square overflow-hidden">
             <Image
               src={employee.photo}
               alt="Profile photo"
-              className="object-cover"
+              className="object-cover "
               fill
             ></Image>
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col text-center md:text-start gap-2 max-w-130 md:max-w-160">
             <h3>{employee.name}</h3>
-            <span className="text-primary">{employee.role}</span>
+            <span className="text-primary font-semibold">{employee.role}</span>
             <p>{employee.description}</p>
           </div>
         </article>

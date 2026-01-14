@@ -13,7 +13,7 @@ const Contact = () => {
         <div className="flex flex-col  items-center px-3">
           <Title heading={"Umów wizytę"}></Title>
           <section className="w-full flex flex-col gap-10 md:flex-row justify-around">
-            <div className="flex flex-col items-center   gap-10">
+            <div className="flex flex-col justify-around items-center   gap-10">
               {/* Dane kontaktowe */}
               <section>
                 <address className="flex ">
@@ -57,7 +57,12 @@ const Contact = () => {
               <nav aria-label="Social media">
                 <ul className="flex items-center gap-2">
                   <li className="">
-                    <a href="https://www.facebook.com" aria-label="Facebook">
+                    <a
+                      href="https://www.facebook.com/naturausmiechu/?locale=pl_PL"
+                      aria-label="Facebook"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <img
                         className="icon-size bg-primary rounded-full p-1 "
                         src="/icons/facebook.svg"
@@ -65,17 +70,14 @@ const Contact = () => {
                       />
                     </a>
                   </li>
+
                   <li className="bg-primary rounded-full ">
-                    <a href="https://www.instagram.com" aria-label="Instagram">
-                      <img
-                        className="icon-size bg-primary rounded-full p-1 "
-                        src="/icons/instagram.svg"
-                        alt="instagram"
-                      />
-                    </a>
-                  </li>
-                  <li className="bg-primary rounded-full ">
-                    <a href="/" aria-label="">
+                    <a
+                      href="https://www.znanylekarz.pl/placowki/natura-usmiechu-gabinet-stomatologiczny"
+                      aria-label="znanly lekarz"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <img
                         className="icon-size bg-primary rounded-full p-1 "
                         src="/icons/star.svg"
@@ -160,25 +162,43 @@ const Contact = () => {
                     />
                   </div>
 
-                  <div>
+                  <div className="flex gap-1 items-center ">
                     <input
                       type="checkbox"
                       id="consent"
                       name="consent"
                       required
+                      className="accent-primary cursor-pointer"
                     />
-                    <label htmlFor="consent">
+                    <label
+                      className=" select-none text-sm cursor-pointer"
+                      htmlFor="consent"
+                    >
                       Wyrażam zgodę na przetwarzanie moich danych osobowych
                     </label>
                   </div>
 
-                  <div>
-                    <button type="submit">Wyślij</button>
+                  <div className="flex justify-center">
+                    <button className="btn py-2" type="submit">
+                      Wyślij
+                    </button>
                   </div>
                 </fieldset>
               </form>
             </div>
           </section>
+          {/* Mapa */}
+          <div className="w-full h-100 md:h-120 m-10 rounded-2xl overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2321.5584891330136!2d18.47731117702021!3d54.417772494020085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd9ffd40e77afb%3A0xc85f7b41ce5443a!2sNatura%20U%C5%9Bmiechu%20Gabinet%20stomatologiczny!5e0!3m2!1spl!2spl!4v1768391351537!5m2!1spl!2spl"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
