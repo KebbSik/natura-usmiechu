@@ -8,7 +8,11 @@ import PinIcon from "../components/svgs/PinIcon";
 const Contact = () => {
   return (
     <div>
-      <Header imageUrl="headers/header.png">Kontakt</Header>
+      {/* <Header imageUrl="headers/header.png">Kontakt</Header> */}
+      <Header objectFit="center_20%" imageUrl="/photos/v_19.avif">
+        Kontakt
+      </Header>
+
       <div className="container ">
         <div className="flex flex-col  items-center px-3">
           <Title heading={"Umów wizytę"}></Title>

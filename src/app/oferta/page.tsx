@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Link from "next/link";
 import Image from "next/image";
 import Title from "../components/Title";
+import VisitUs from "../components/VisitUs";
 
 const Categories = [
   {
@@ -50,7 +51,7 @@ const data = {
 const Offer = () => {
   return (
     <>
-      <section className="container">
+      <section className="container mb-10">
         <div className="flex flex-col items-center px-3">
           <Title heading={data.heading} description={data.paragraph}></Title>
           <div className="flex flex-wrap p-5 gap-2 sm:gap-5  lg:gap-10 max-w-240 justify-center">
@@ -73,6 +74,7 @@ const Offer = () => {
           </div>
         </div>
       </section>
+      <VisitUs />
     </>
   );
 };

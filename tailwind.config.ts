@@ -7,6 +7,12 @@ const config: Config = {
     "./features/**/*.{ts,tsx}",
   ],
   theme: {
+    extend: {
+      colors: {
+        primary: "var(--color-primary)",
+        "secondary-D": "var(--color-secondary-D)",
+      },
+    },
     fontFamily: {
       sans: ["Inter", "system-ui", "sans-serif"],
     },

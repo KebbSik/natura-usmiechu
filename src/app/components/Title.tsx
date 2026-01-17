@@ -12,7 +12,7 @@ export default function Title({ heading, description }: TitleProps) {
         {heading}
       </h3>
 
-      <hr className="w-full border-t-3 border-primary" />
+      <hr className="w-full border-t-3 border-primary/30" />
       <p className="w-3/4 text-base text-center text-gray-600 text-wrap">
         {description}
       </p>

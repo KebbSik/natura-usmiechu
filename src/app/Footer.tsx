@@ -4,6 +4,7 @@ import React from "react";
 import EnvelopeIcon from "./components/svgs/EnvelopeIcon";
 import PinIcon from "./components/svgs/PinIcon";
 import PhoneIcon from "./components/svgs/PhoneIcon";
+import Logo from "./components/svgs/Logo";
 
 const Footer = () => {
   return (
@@ -12,13 +13,7 @@ const Footer = () => {
         <div className=" flex flex-col md:flex-row  md:flex-wrap gap-y-10">
           <section className=" flex flex-col items-center md:w-1/2">
             {/*  Logo  */}
-            <Link
-              href="/"
-              aria-label="Strona główna"
-              className="relative flex w-48 h-20"
-            >
-              <Image src="/logo/Logo_2.svg" alt="logo" fill></Image>
-            </Link>
+            <Logo width={170} height={100} />
 
             {/*  Social media  */}
             <nav aria-label="Social media">
@@ -75,6 +70,7 @@ const Footer = () => {
 
                 <li className="contents">
                   <EnvelopeIcon className="text-black" width={24} height={24} />
+
                   <a href="mailto:kontakt@firma.pl">kontakt@firma.pl</a>
                 </li>
 

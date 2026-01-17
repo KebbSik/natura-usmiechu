@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Image from "next/image";
 import { it } from "node:test";
 import Title from "../components/Title";
+import VisitUs from "../components/VisitUs";
 
 interface Props {
   title: string;
@@ -302,12 +303,14 @@ const PriceList = () => {
   };
 
   return (
-    <section className="min-h-screen mb-10">
-      <Header imageUrl="headers/header.png">Cennik</Header>
-      <div className="container">
-        <div className="flex flex-col items-center px-3">
+    <section className="min-h-screen">
+      <Header objectFit="center_50%" imageUrl="/photos/v_12.avif">
+        Cennik
+      </Header>
+      <div className="container mb-10">
+        <div className="flex flex-col items-center px-3 ">
           <Title heading={"Zapoznaj się z naszym cennikiem"}></Title>
-          <div className="flex flex-col gap-1  mx-auto">
+          <div className="flex flex-col gap-1  mx-auto py-10">
             {data.map((item) => (
               <AccordionItem
                 key={item.id}
@@ -320,6 +323,7 @@ const PriceList = () => {
           </div>
         </div>
       </div>
+      <VisitUs />
     </section>
   );
 };

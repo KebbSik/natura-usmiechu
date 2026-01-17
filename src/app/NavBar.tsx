@@ -1,41 +1,157 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Logo from "./components/svgs/Logo";
+import Burger from "./components/svgs/Burger";
+import { ThemeToggle } from "./components/ThemeToggle";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  const navHeight = 20;
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > navHeight);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+  // Prevent scroll
+  // useEffect(() => {
+  //   document.body.style.overflow = open ? "hidden" : "";
+
+  //   return () => {
+  //     document.body.style.overflow = "";
+  //   };
+  // }, [open]);
+
+  // Navbar resize hook
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  // Next.js bug
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
     <>
-      <div className="sticky top-0 border-b border-secondary-D  bg-white px-6 flex h-16 justify-between items-center z-50 ">
+      <div
+        className={`fixed w-full  top-0 transition-colors duration-150 ${
+          scrolled ? (open ? "" : "border-b") : ""
+        } border-secondary-D  ${
+          scrolled
+            ? "bg-white text-black"
+            : "bg-linear-to-b from-primary/60  to-transparent  text-white "
+        } px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 flex h-${navHeight} justify-between items-center z-50 ${
+          open ? "bg-none bg-white text-black" : ""
+        }`}
+      >
         {/* Logo */}
-        <Link href="/" aria-label="Strona główna">
-          <Image
-            src="/logo/Logo_2.svg"
-            alt="logo"
-            width={120}
-            height={40}
-          ></Image>
+        <Link
+          href="/"
+          aria-label="Strona główna"
+          className={`${
+            scrolled ? " text-primary" : open ? "text-primary" : "text-white"
+          }`}
+
+          // className={`${
+          //   scrolled ? " text-black" : open ? "text-black" : "text-white"
+          // }`}
+        >
+          {/* <Logo width={170} height={100} /> */}
+          <Logo width={200} height={100} />
         </Link>
+        <ThemeToggle />
         {/* Desktop menu */}
-        <nav className="hidden md:flex  items-center justify-between">
-          <ul className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex  items-center justify-between ">
+          <ul className={`hidden md:flex items-center gap-8  text-lg `}>
             <li>
-              <Link href="/">Home</Link>
+              <Link
+                className="   
+                relative
+                after:absolute after:left-0 after:-bottom-1
+                after:h-0.5 after:w-0
+              after:bg-white
+                after:transition-all after:duration-300
+                hover:after:w-full
+                "
+                href="/"
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/o-nas">O nas</Link>
+              <Link
+                className="   
+                relative
+                after:absolute after:left-0 after:-bottom-1
+                after:h-0.5 after:w-0
+              after:bg-white
+                after:transition-all after:duration-300
+                hover:after:w-full"
+                href="/o-nas"
+              >
+                O nas
+              </Link>
             </li>
             <li>
-              <Link href="/oferta">Oferta</Link>
+              <Link
+                className="   
+                relative
+                after:absolute after:left-0 after:-bottom-1
+                after:h-0.5 after:w-0
+              after:bg-white
+                after:transition-all after:duration-300
+                hover:after:w-full"
+                href="/oferta"
+              >
+                Oferta
+              </Link>
             </li>
             <li>
-              <Link href="/cennik">Cennik</Link>
+              <Link
+                className="   
+                relative
+                after:absolute after:left-0 after:-bottom-1
+                after:h-0.5 after:w-0
+              after:bg-white
+                after:transition-all after:duration-300
+                hover:after:w-full"
+                href="/cennik"
+              >
+                Cennik
+              </Link>
             </li>
             <li>
-              <Link href="/kontakt">Umów wizytę</Link>
+              <Link
+                className="   
+                relative
+                after:absolute after:left-0 after:-bottom-1
+                after:h-0.5 after:w-0
+              after:bg-white
+                after:transition-all after:duration-300
+                hover:after:w-full"
+                href="/kontakt"
+              >
+                Umów wizytę
+              </Link>
             </li>
           </ul>
         </nav>
@@ -44,51 +160,59 @@ export default function Navbar() {
           className=" md:hidden cursor-pointer"
           onClick={() => setOpen(!open)}
         >
-          <Image
-            src={open ? "/icons/close-x.svg" : "/icons/hamburger.svg"}
-            alt="hamburger"
-            width={25}
-            height={25}
-          ></Image>
+          <Burger
+            opened={open}
+            className={`${
+              scrolled ? " text-black" : open ? "text-black" : "text-white"
+            } transition-all duration-normal ${open ? "rotate-180" : ""} `}
+          ></Burger>
         </button>
       </div>
-
+      {open && (
+        <div
+          className="fixed inset-0 z-40 bg-black/30 md:hidden"
+          onClick={() => setOpen(false)}
+        />
+      )}
       <ul
         className={`
           md:hidden
-          fixed top-16 left-0 right-0
-        bg-white
+          fixed top-0 left-0 right-0
+          border-secondary-D 
+          ${scrolled ? "border-b " : "border-b"}  ${scrolled ? "bg-white" : ""}
+          ${open ? "bg-white" : "bg-white/5 text-black/5"}
           flex flex-col 
           items-center
-          transform transition-transform duration-300 ease-in-out
+          transform transition-all duration-500 ease-in-out
           ${
             open
-              ? "translate-y-0 pointer-events-auto"
+              ? // If navbar height haschanged, need to change this value here manulay
+                `translate-y-20 pointer-events-auto`
               : "-translate-y-full pointer-events-none"
           }
           z-40`}
       >
-        <li className="w-full h-15 flex-center  ">
+        <li className="w-full h-16 flex-center hover:bg-primary/15 transform transition-all duration-150 ease-in-out  ">
           <Link onClick={() => setOpen(false)} href="/">
             Home
           </Link>
         </li>
-        <li className="w-full h-15 flex-center ">
+        <li className="w-full h-16 flex-center hover:bg-primary/15 transform transition-all duration-100 ease-in-out  ">
           <Link onClick={() => setOpen(false)} href="/o-nas">
             O nas
           </Link>
         </li>
-        <li className="w-full h-15 flex-center ">
+        <li className="w-full h-16 flex-center hover:bg-primary/15 transform transition-all duration-100 ease-in-out ">
           <Link onClick={() => setOpen(false)} href="/oferta">
             Oferta
           </Link>
         </li>
-        <li className="w-full h-15 flex-center ">
+        <li className="w-full h-16 flex-center hover:bg-primary/15 transform transition-all duration-100 ease-in-out ">
           <Link onClick={() => setOpen(false)} href="/cennik">
             Cennik
           </Link>
         </li>
-        <li className="w-full h-15 flex-center ">
+        <li className="w-full h-16 flex-center hover:bg-primary/15 transform transition-all duration-100 ease-in-out ">
           <Link onClick={() => setOpen(false)} href="/kontakt">
             Umów wizytę
           </Link>

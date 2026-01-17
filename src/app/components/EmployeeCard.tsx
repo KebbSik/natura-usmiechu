@@ -18,13 +18,13 @@ type EmployeesList = {
 
 const EmployeeCard = ({ employees }: EmployeesList) => {
   return (
-    <div className="p-10">
+    <div className="md:p-10">
       {employees.map((employee) => (
         <article
           key={employee.name}
-          className="flex flex-col  md:flex-row md:even:flex-row-reverse items-center justify-start  gap-5 md:gap-15 my-10"
+          className="py-5 md:px-5 md:rounded-lg flex flex-col odd:bg-secondary-L  md:flex-row md:even:flex-row-reverse items-center justify-start  gap-5 md:gap-5 my-10"
         >
-          <div className="relative min-w-50 w-full max-w-90 md:max-w-70 rounded-2xl aspect-square overflow-hidden">
+          <div className="relative min-w-50 w-full md:min-w-70 max-w-90   rounded-md aspect-3/4 overflow-hidden">
             <Image
               src={employee.photo}
               alt="Profile photo"

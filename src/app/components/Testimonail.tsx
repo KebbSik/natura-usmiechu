@@ -18,7 +18,8 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="section-padding">
+    // <section className="section-padding  ">
+    <section className="section-padding bg-primary/10">
       <div className="container ">
         <div className="flex flex-col gap-5">
           <header className="mb-8 h-1/2">
@@ -45,6 +46,7 @@ const Testimonials = () => {
               <li
                 key={index}
                 className="
+             
                 testimonial-card
                 snap-center
                 min-w-[75%]

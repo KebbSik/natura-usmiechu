@@ -4,15 +4,16 @@ import React from "react";
 interface Props {
   imageUrl: string;
   children?: React.ReactNode;
+  objectFit: string;
 }
 
-const Header = ({ imageUrl, children }: Props) => {
+const Header = ({ imageUrl, children, objectFit }: Props) => {
   return (
-    <header className="w-full h-40 md:h-50  relative">
+    <header className="w-full h-60 md:h-100  relative">
       <div>
         <Image
-          className=" opacity-40"
-          src="/headings/header.png"
+          className={`opacity-100 object-cover object-[${[objectFit]}]`}
+          src={imageUrl}
           alt="header"
           fill
         />
