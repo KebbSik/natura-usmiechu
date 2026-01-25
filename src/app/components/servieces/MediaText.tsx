@@ -2,28 +2,25 @@ import React from "react";
 import Image from "next/image";
 import { reverse } from "dns";
 import servicesProps from "@/app/components/servieces/servicesProps";
+import { headers } from "next/headers";
 
-const MediaText = ({ bg, reverse }: servicesProps) => {
+interface MediaSectionProps extends servicesProps {
+  data: {
+    header: string;
+    content: string;
+  };
+}
+
+const MediaText = ({ bg, reverse, data }: MediaSectionProps) => {
   return (
     <>
-      <section className={`section-padding ${bg} `}>
-        <div className="w-full max-w-2xl  ">
-          <h3 className="rounded-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </h3>
+      <section className={`section-padding ${bg} rounded-2xl shadow-md`}>
+        <div className="container">
+          <div className="w-full   ">
+            <h3 className="rounded-lg">{data.header}</h3>
 
-          <p className="mt-6 rounded-lg">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis
-            voluptate fugiat placeat numquam rem aliquid vero nemo, consectetur
-            beatae ea praesentium porro! Reprehenderit alias, accusamus non
-            corporis nisi doloremque. Aperiam corrupti tempora dicta nihil
-            voluptates accusantium nam iure corporis optio, nulla iusto vel
-            sapiente mollitia distinctio porro natus. Quo soluta nemo qui illum
-            odio quia. Earum velit qui quae culpa veniam nihil porro officiis,
-            ipsa repellendus sint animi accusamus! Consequatur placeat delectus,
-            dolorum culpa fugit dignissimos ipsam possimus voluptatibus
-            cupiditate!
-          </p>
+            <p className="mt-6 rounded-lg">{data.content}</p>
+          </div>
         </div>
       </section>
     </>

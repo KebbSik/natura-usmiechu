@@ -3,46 +3,30 @@ import React from "react";
 import servicesProps from "@/app/components/servieces/servicesProps";
 import { promises } from "dns";
 
-const steps = [
-  {
-    title: "Step 1",
-    content:
-      "VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.s",
-  },
-  {
-    title: "Step 2",
-    content:
-      "VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.s",
-  },
-  {
-    title: "Step 3",
-    content:
-      "VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.s",
-  },
-  {
-    title: "Step 4",
-    content:
-      "VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.s",
-  },
-];
+interface StepElement {
+  title: string;
+  content: string;
+}
+interface StepProps extends servicesProps {
+  stepElements: StepElement[];
+  finishElement: StepElement;
+  imageUrl: string;
+}
 
-const finish = {
-  name: "FINISH",
-  content:
-    "Pitchfork ugh tattooed scenester echo park gastropub whatever cold-pressed retro.",
-};
-
-const imageUrl =
-  "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80";
-
-const Steps = ({ bg, reverse }: servicesProps) => {
+const Steps = ({
+  bg,
+  reverse,
+  stepElements,
+  finishElement,
+  imageUrl,
+}: StepProps) => {
   return (
     <section className={`text-gray-600 body-font ${bg}`}>
-      <div className="container px-5 py-24 mx-auto flex flex-wrap">
+      <div className="container px-5 py-12 mx-auto flex flex-wrap">
         <div className="flex flex-wrap w-full">
           <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
-            {steps.map((el, index) => (
-              <div className="flex relative pb-12">
+            {stepElements.map((el, index) => (
+              <div key={index} className="flex relative pb-12">
                 <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                   <div className="h-full w-1 bg-primary/50 pointer-events-none"></div>
                 </div>
@@ -62,12 +46,9 @@ const Steps = ({ bg, reverse }: servicesProps) => {
                 </div>
                 <div className="grow pl-4">
                   <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                    STEP 1
+                    {el.title}
                   </h2>
-                  <p className="leading-relaxed">
-                    VHS cornhole pop-up, try-hard 8-bit iceland helvetica.
-                    Kinfolk bespoke try-hard cliche palo santo offal.
-                  </p>
+                  <p className="leading-relaxed">{el.content}</p>
                 </div>
               </div>
             ))}
@@ -88,15 +69,15 @@ const Steps = ({ bg, reverse }: servicesProps) => {
               </div>
               <div className="grow pl-4">
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                  {finish.name}
+                  {finishElement.title}
                 </h2>
-                <p className="leading-relaxed">{finish.content}</p>
+                <p className="leading-relaxed">{finishElement.content}</p>
               </div>
             </div>
           </div>
 
           <img
-            className="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12"
+            className="lg:w-3/5 md:w-1/2 object-cover shadow-md object-center rounded-lg md:mt-0 mt-12"
             src={imageUrl}
             alt="step"
           />

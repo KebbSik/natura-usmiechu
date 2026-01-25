@@ -2,38 +2,28 @@ import { title } from "process";
 import React from "react";
 import servicesProps from "@/app/components/servieces/servicesProps";
 
-const data = [
-  {
-    title: "Copy & paste components",
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum              evenietz",
-  },
-  {
-    title: "Copy & paste components",
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum              evenietz",
-  },
-  {
-    title: "Copy & paste components",
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum              evenietz",
-  },
-];
+interface CardElement {
+  title: string;
+  content: string;
+}
+interface CardsProps extends servicesProps {
+  title: string;
+  cardElements: CardElement[];
+}
 
-const GridList = ({ bg, reverse }: servicesProps) => {
+const Card = ({ bg, title, cardElements }: CardsProps) => {
   return (
-    <section className={`${bg}`}>
+    <section className={`${bg} shadow-md`}>
       <div className="container px-6 py-10 mx-auto">
-        <h1 className="text-2xl font-semibold text-center  capitalize lg:text-3xl">
-          explore our <br /> awesome{" "}
-          <span className="text-primary text-2xl">Components</span>
+        <h1 className="text-2xl font-semibold text-center   lg:text-3xl">
+          {title}
         </h1>
 
-        <div className="flex flex-col lg:flex-row gap-8 mt-8 xl:mt-12 xl:gap-16 ">
-          {data.map((el, index) => (
+        <div className="flex flex-col lg:flex-row  gap-8 mt-8 xl:mt-12 xl:gap-16 ">
+          {cardElements.map((el, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-6 space-y-3 text-center bg-white rounded-xl "
+              className="flex flex-col flex-1 items-center shadow-md px-6 py-12 space-y-3 text-center bg-white rounded-xl "
             >
               <span className="inline-block p-3 text-white bg-primary rounded-full ">
                 <svg
@@ -51,7 +41,7 @@ const GridList = ({ bg, reverse }: servicesProps) => {
                 </svg>
               </span>
 
-              <h1 className="text-xl font-semibold  capitalize ">{el.title}</h1>
+              <h1 className="text-xl font-semibold   ">{el.title}</h1>
 
               <p>{el.content}</p>
             </div>
@@ -62,4 +52,4 @@ const GridList = ({ bg, reverse }: servicesProps) => {
   );
 };
 
-export default GridList;
+export default Card;

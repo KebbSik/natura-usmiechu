@@ -77,7 +77,7 @@ const Offer = () => {
           </div>
         </div>
       </section>
-      <VisitUs />
+      {/* <VisitUs /> */}
     </>
   );
 };

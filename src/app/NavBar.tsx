@@ -59,7 +59,7 @@ export default function Navbar() {
           scrolled
             ? "bg-white text-black"
             : "bg-linear-to-b from-primary/60  to-transparent  text-white "
-        } px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 flex h-${navHeight} justify-between items-center z-50 ${
+        } py-5 md:py-0 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 flex h-${navHeight} justify-between items-center z-50 ${
           open ? "bg-none bg-white text-black" : ""
         }`}
       >
@@ -76,7 +76,10 @@ export default function Navbar() {
           // }`}
         >
           {/* <Logo width={170} height={100} /> */}
-          <Logo width={200} height={100} />
+          {/* <Logo width={200} height={100} /> */}
+          <div className="w-40  md:w-50 md:h-25  flex items-center">
+            <Logo width="100%" height="100" />
+          </div>
         </Link>
         <ThemeToggle />
         {/* Desktop menu */}

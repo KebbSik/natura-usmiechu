@@ -6,6 +6,7 @@ import Image from "next/image";
 import { it } from "node:test";
 import Title from "../components/Title";
 import VisitUs from "../components/VisitUs";
+import Cta from "../components/servieces/Cta";
 
 interface Props {
   title: string;
@@ -323,7 +324,7 @@ const PriceList = () => {
           </div>
         </div>
       </div>
-      <VisitUs />
+      <Cta />
     </section>
   );
 };

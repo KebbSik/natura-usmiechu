@@ -29,10 +29,13 @@ const GridList = ({
 
         <p className="mt-4 ">{description}</p>
 
-        <div className="grid grid-cols-1 mt-8 xl:mt-12 gap-16 md:grid-cols-2 xl:grid-cols-3 ">
+        <div className="grid grid-cols-1 gap-16 mt-8 xl:mt-12 md:grid-cols-2  ">
           {gridElements.map((el, index) => (
-            <div key={index} className="space-y-3 ">
-              <span className="inline-block p-3 text-white bg-primary rounded-full ">
+            <div
+              key={index}
+              className="space-y-3 max-w-100 justify-self-center "
+            >
+              <span className="inline-block p-3 text-white  bg-primary rounded-full ">
                 <svg
                   className="w-6 h-6"
                   fill="none"

@@ -13,7 +13,10 @@ const Footer = () => {
         <div className=" flex flex-col md:flex-row  md:flex-wrap gap-y-10">
           <section className=" flex flex-col items-center md:w-1/2">
             {/*  Logo  */}
-            <Logo width={170} height={100} />
+            <div className="w-40  md:w-50 md:h-25  py-5 flex items-center">
+              <Logo width="100%" height="100" />
+            </div>
+            {/* <Logo width={170} height={100} /> */}
 
             {/*  Social media  */}
             <nav aria-label="Social media">

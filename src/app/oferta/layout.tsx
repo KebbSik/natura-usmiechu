@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import Header from "../components/Header";
+import Cta from "../components/servieces/Cta";
 
 const OfertaLayout = ({ children }: { children: ReactNode }) => {
   return (
@@ -8,6 +9,7 @@ const OfertaLayout = ({ children }: { children: ReactNode }) => {
         Oferta
       </Header> */}
       {children}
+      <Cta />
     </>
   );
 };
