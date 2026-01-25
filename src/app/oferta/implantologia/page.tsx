@@ -8,11 +8,16 @@ const data = {
 };
 const Implantologia = () => {
   return (
-    <section className="container">
-      <div className="flex flex-col items-center m-10 ">
-        <Title heading={data.heading} description={data.paragraph}></Title>
-      </div>
-    </section>
+    <>
+      <Header objectFit="center-50%" imageUrl="/photos/v_14.avif">
+        Implantologia
+      </Header>
+      <section className="container">
+        <div className="flex flex-col items-center m-10 ">
+          <Title heading={data.heading} description={data.paragraph}></Title>
+        </div>
+      </section>
+    </>
   );
 };
 

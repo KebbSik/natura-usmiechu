@@ -51,6 +51,9 @@ const data = {
 const Offer = () => {
   return (
     <>
+      <Header objectFit="center-50%" imageUrl="/photos/v_14.avif">
+        Oferta
+      </Header>
       <section className="container mb-10">
         <div className="flex flex-col items-center px-3">
           <Title heading={data.heading} description={data.paragraph}></Title>

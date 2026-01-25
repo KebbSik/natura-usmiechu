@@ -17,8 +17,8 @@ const Header = ({ imageUrl, children, objectFit }: Props) => {
           alt="header"
           fill
         />
-        <div className="absolute w-full h-full bg-primary/40 flex-center">
-          <h1 className="text-white">{children}</h1>
+        <div className="absolute w-full h-full bg-primary/40 flex-center ">
+          <h1 className="text-white text-center">{children}</h1>
         </div>
       </div>
     </header>

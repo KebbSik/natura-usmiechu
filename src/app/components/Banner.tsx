@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Mark from "./svgs/Mark";
 
 const Banner = () => {
   return (
@@ -11,12 +12,14 @@ const Banner = () => {
     bg-no-repeat
     bg-[center_60%]
     bg-cover
-    md:bg-none
+   md:bg-linear-to-t
+   overflow-hidden
+
+
   "
     >
       {/* OVERLAY – tylko mobile */}
       <div className="absolute inset-0 bg-primary/40 md:hidden" />
-
       <div className="container relative z-10">
         <div className="grid items-center justify-center gap-12 md:grid-cols-2">
           {/* LEWA STRONA – TREŚĆ */}
@@ -48,6 +51,9 @@ const Banner = () => {
             />
           </figure>
         </div>
+      </div>
+      <div className="hidden md:block">
+        <Mark />
       </div>
     </section>
   );

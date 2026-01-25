@@ -4,6 +4,7 @@ import Title from "../components/Title";
 import EmployeeCard from "../components/EmployeeCard";
 import Image from "next/image";
 import VisitUs from "../components/VisitUs";
+import Sinus from "../components/svgs/Sinus";
 
 const data = {
   heading: "Poznajmy się bliżej",
@@ -104,7 +105,9 @@ const AboutUs = () => {
           </p>
         </article>
       </div>
-      <div className="container max-w-370">
+      <div className="container max-w-370 relative">
+        <Sinus />
+
         <EmployeeCard employees={employeeList}></EmployeeCard>
       </div>
       <VisitUs />
