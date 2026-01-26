@@ -145,60 +145,41 @@ export default function Navbar() {
                 O nas
               </Link>
             </li>
-            {/* Prev Code */}
-            {/* <li>
+
+            <li className="relative group">
+              {/* LINK GŁÓWNY */}
               <Link
-                className="   
-                relative
-                after:absolute after:left-0 after:-bottom-1
-                after:h-0.5 after:w-0
-              after:bg-white
-                after:transition-all after:duration-300
-                hover:after:w-full"
                 href="/oferta"
+                className="inline-flex items-center px-4 py-2 hover:bg-white/20  rounded-2xl"
               >
                 Oferta
+                <svg className="w-4 h-4 mt-1 " viewBox="0 0 20 20">
+                  <path d="M10 12l-5-5h10l-5 5z" fill="currentColor" />
+                </svg>
               </Link>
-            </li> */}
-            <li>
-              <Link
-                className="   
-                relative
-               
-                "
-                href="/oferta"
-              >
-                <div className="relative inline-block text-left">
-                  <div className="group">
-                    <div className="inline-flex justify-center items-center w-full px-4 py-2  hover:bg-white/20 rounded-2xl">
-                      Oferta
-                      {/* <!-- Dropdown arrow --> */}
-                      <svg
-                        className="w-4 h-4 mt-1 ml-1 -mr-1"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z" />
-                      </svg>
-                    </div>
 
-                    {/* <!-- Dropdown menu --> */}
-                    <div className="absolute left-0 w-40  origin-top-left bg-white divide-y divide-gray-100 rounded-bl-md rounded-br-md border-l border-b border-r border-primary opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
-                      <div className="py-1">
-                        {Categories.map((el, index) => (
-                          <a
-                            key={index}
-                            href={el.link}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/30"
-                          >
-                            {el.name}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+              {/* DROPDOWN */}
+              <div
+                className="
+                  absolute left-0 top-full
+                  w-56 bg-white
+                  shadow-md
+                  opacity-0 invisible
+                  group-hover:opacity-100 group-hover:visible
+                  transition duration-200
+                  z-50
+                "
+              >
+                {Categories.map((el, index) => (
+                  <Link
+                    key={index}
+                    href={el.link}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/30"
+                  >
+                    {el.name}
+                  </Link>
+                ))}
+              </div>
             </li>
             <li>
               <Link
