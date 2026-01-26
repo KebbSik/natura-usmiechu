@@ -3,7 +3,13 @@ import Header from "../components/Header";
 import Link from "next/link";
 import Image from "next/image";
 import Title from "../components/Title";
-import VisitUs from "../components/VisitUs";
+import ZachoSVG from "../components/svgs/services/ZachoSVG";
+import ChirurgiaSVG from "../components/svgs/services/ChirurgiaSVG";
+import RadioSVG from "../components/svgs/services/RadioSVG";
+import ProtetykaSVG from "../components/svgs/services/ProtetykaSVG";
+import OrtoSVG from "../components/svgs/services/OrtoSVG";
+import PerioSVG from "../components/svgs/services/PerioSVG";
+import ImplantSVG from "../components/svgs/services/ImplantSVG";
 
 const Categories = [
   {
@@ -57,27 +63,64 @@ const Offer = () => {
       <section className="container mb-10">
         <div className="flex flex-col items-center px-3">
           <Title heading={data.heading} description={data.paragraph}></Title>
-          <div className="flex flex-wrap p-5 gap-2 sm:gap-5  lg:gap-10 max-w-240 justify-center">
-            {/* To jest kontener na Linki do podstron oferty */}
-            {Categories.map((category) => (
-              <Link
-                key={category.name}
-                className="w-full max-w-60 h-25 sm:h-30  border md:w-40  p-4 flex flex-col  items-center gap-1 text-center hover:border-3 rounded-xl border-primary transition-all duration-fast ease-in-out "
-                href={category.link}
-              >
-                <Image
-                  src={category.src}
-                  alt={category.name}
-                  width={40}
-                  height={40}
-                />
-                <div className="flex-1 flex items-center">{category.name}</div>
-              </Link>
-            ))}
+          {/* To jest kontener na Linki do podstron oferty */}
+          <div className="flex flex-wrap p-5 gap-2 sm:gap-5  lg:gap-10 max-w-240 justify-center  text-primary">
+            <Link
+              className="w-full max-w-60 h-30 sm:h-30  border md:w-60  p-4 flex flex-col  items-center gap-1 text-center hover:bg-primary/80 hover:text-white rounded-xl border-primary transition-all duration-fast ease-in-out "
+              href={"/oferta/zachowawcza"}
+            >
+              <ZachoSVG width={62} height={82} />
+              <div className="flex-1 flex items-center">
+                Stomatologia zachowawcza
+              </div>
+            </Link>
+            <Link
+              className="w-full max-w-60 h-30 sm:h-30  border md:w-60  p-4 flex flex-col  items-center gap-1 text-center hover:bg-primary/80 hover:text-white rounded-xl border-primary transition-all duration-fast ease-in-out "
+              href={"/oferta/chirurgia"}
+            >
+              <ChirurgiaSVG width={62} height={82} />
+              <div className="flex-1 flex items-center  ">
+                Chirurgia stomatologiczna
+              </div>
+            </Link>
+            <Link
+              className="w-full max-w-60 h-30 sm:h-30  border md:w-60  p-4 flex flex-col  items-center gap-1 text-center hover:bg-primary/80 hover:text-white rounded-xl border-primary transition-all duration-fast ease-in-out "
+              href={"/oferta/radiologia"}
+            >
+              <RadioSVG width={62} height={82} />
+              <div className="flex-1 flex items-center ">Radiologia</div>
+            </Link>
+            <Link
+              className="w-full max-w-60 h-30 sm:h-30  border md:w-60  p-4 flex flex-col  items-center gap-1 text-center hover:bg-primary/80 hover:text-white rounded-xl border-primary transition-all duration-fast ease-in-out "
+              href={"/oferta/protetyka"}
+            >
+              <ProtetykaSVG width={62} height={82} />
+              <div className="flex-1 flex items-center ">Protetyka</div>
+            </Link>
+            <Link
+              className="w-full max-w-60 h-30 sm:h-30  border md:w-60  p-4 flex flex-col  items-center gap-1 text-center hover:bg-primary/80 hover:text-white rounded-xl border-primary transition-all duration-fast ease-in-out "
+              href={"/oferta/ortodoncja"}
+            >
+              <OrtoSVG width={62} height={82} />
+              <div className="flex-1 flex items-center ">Ortodoncja</div>
+            </Link>
+            <Link
+              className="w-full max-w-60 h-30 sm:h-30  border md:w-60  p-4 flex flex-col  items-center gap-1 text-center hover:bg-primary/80 hover:text-white rounded-xl border-primary transition-all duration-fast ease-in-out "
+              href={"/oferta/periodontologia"}
+            >
+              <PerioSVG width={62} height={82} />
+              <div className="flex-1 flex items-center ">Periodontologia</div>
+            </Link>
+            <Link
+              className="w-full max-w-60 h-30 sm:h-30  border md:w-60  p-4 flex flex-col  items-center gap-1 text-center hover:bg-primary/80 hover:text-white rounded-xl border-primary transition-all duration-fast ease-in-out "
+              href={"/oferta/implantologia"}
+            >
+              <ImplantSVG width={62} height={62} />
+              <div className="flex-1 flex items-center ">Implantologia</div>
+            </Link>
           </div>
         </div>
       </section>
-      {/* <VisitUs /> */}
     </>
   );
 };

@@ -7,6 +7,37 @@ import Logo from "./components/svgs/Logo";
 import Burger from "./components/svgs/Burger";
 import { ThemeToggle } from "./components/ThemeToggle";
 
+const Categories = [
+  {
+    name: "Stomatologia zachowawcza",
+    link: "/oferta/zachowawcza",
+  },
+  {
+    name: "Implantologia",
+    link: "/oferta/implantologia",
+  },
+  {
+    name: "Chirurgia stomatologiczna",
+    link: "/oferta/chirurgia",
+  },
+  {
+    name: "Protetyka",
+    link: "/oferta/protetyka",
+  },
+  {
+    name: "Ortodoncja",
+    link: "/oferta/ortodoncja",
+  },
+  {
+    name: "Periodontologia",
+    link: "/oferta/periodontologia",
+  },
+  {
+    name: "Radiologia",
+    link: "/oferta/radiologia",
+  },
+];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -114,7 +145,8 @@ export default function Navbar() {
                 O nas
               </Link>
             </li>
-            <li>
+            {/* Prev Code */}
+            {/* <li>
               <Link
                 className="   
                 relative
@@ -126,6 +158,46 @@ export default function Navbar() {
                 href="/oferta"
               >
                 Oferta
+              </Link>
+            </li> */}
+            <li>
+              <Link
+                className="   
+                relative
+               
+                "
+                href="/oferta"
+              >
+                <div className="relative inline-block text-left">
+                  <div className="group">
+                    <div className="inline-flex justify-center items-center w-full px-4 py-2  hover:bg-white/20 rounded-2xl">
+                      Oferta
+                      {/* <!-- Dropdown arrow --> */}
+                      <svg
+                        className="w-4 h-4 mt-1 ml-1 -mr-1"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path fill-rule="evenodd" d="M10 12l-5-5h10l-5 5z" />
+                      </svg>
+                    </div>
+
+                    {/* <!-- Dropdown menu --> */}
+                    <div className="absolute left-0 w-40  origin-top-left bg-white divide-y divide-gray-100 rounded-bl-md rounded-br-md border-l border-b border-r border-primary opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
+                      <div className="py-1">
+                        {Categories.map((el, index) => (
+                          <a
+                            key={index}
+                            href={el.link}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/30"
+                          >
+                            {el.name}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </Link>
             </li>
             <li>
