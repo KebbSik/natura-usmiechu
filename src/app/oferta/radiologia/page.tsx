@@ -32,19 +32,19 @@ const Radiologia = () => {
         title={"Nowoczesna radiologia w akcji"}
         cardElements={[
           {
-            title: "Dokładna diagnoza",
+            title: "Zdjęcia pantomograficzne",
             content:
-              "Badania RTG umożliwiają wykrycie zmian niewidocznych podczas standardowego badania stomatologicznego.",
+              "Badanie panoramiczne pozwalające na całościową ocenę stanu uzębienia, kości szczęki i żuchwy oraz stawów skroniowo-żuchwowych. Jest podstawą do planowania leczenia protetycznego, chirurgicznego, implantologicznego i ortodontycznego.",
           },
           {
-            title: "Bezpieczeństwo pacjenta",
+            title: "Zdjęcia zębowe",
             content:
-              "Nowoczesne technologie radiologiczne pozwalają ograniczyć dawkę promieniowania do minimum.",
+              "Punktowe zdjęcia RTG umożliwiają dokładną ocenę pojedynczych zębów oraz ich korzeni. Pozwalają wykryć zmiany próchnicowe, stany zapalne oraz kontrolować leczenie kanałowe z dużą precyzją.",
           },
           {
-            title: "Lepsze planowanie leczenia",
+            title: "Tomografia komputerowa szczęki i żuchwy",
             content:
-              "Precyzyjne obrazy pomagają zaplanować leczenie zachowawcze, chirurgiczne, implantologiczne i ortodontyczne.",
+              "Trójwymiarowe badanie obrazowe zapewniające szczegółową ocenę struktur kostnych. Niezbędne w planowaniu implantów, zabiegów chirurgicznych oraz w diagnostyce skomplikowanych przypadków wymagających najwyższej dokładności.",
           },
         ]}
       />

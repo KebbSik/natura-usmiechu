@@ -8,7 +8,7 @@ const Cta = () => {
       className=" lg:py-12 lg:flex lg:justify-center text-center text-white relative bg-no-repeat bg-cover bg-center"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className="absolute inset-0 bg-primary/50 z-5" />
+      <div className="absolute inset-0 bg-primary/20 z-5" />
       <div className="absolute inset-0 bg-black/30 z-5" />
       <div className=" z-10 relative overflow-hidden  lg:mx-8 lg:flex lg:max-w-6xl lg:w-full  lg:rounded-xl">
         <div className="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2 mx-auto">

@@ -2,22 +2,22 @@ import Image from "next/image";
 
 const items = [
   {
-    header: "Example Header",
-    text: "W Naturze Uśmiechu wierzymy, że piękny uśmiech zaczyna się od zdrowia i naturalnej harmonii. Za każdym sukcesem leczenia stoi nasz doświadczony, pełen zaangażowania zespół specjalistów, którzy dbają nie tylko o rezultaty, ale przede wszystkim o Twój komfort i dobre samopoczucie.",
+    header: "Kompleksowa opieka w jednym miejscu",
+    text: "Zapewniamy pełen zakres nowoczesnej opieki stomatologicznej, dzięki czemu pacjenci mogą kompleksowo zadbać o zdrowie i estetykę uśmiechu w jednym miejscu. Od diagnostyki, przez leczenie zachowawcze, aż po zaawansowane procedury – każdy etap planujemy spójnie i z myślą o długofalowych efektach. To komfort, oszczędność czasu i pewność leczenia na najwyższym poziomie.",
     image: "/photos/g.avif",
     alt: "Nowoczesny gabinet stomatologiczny",
     rotation: 12,
   },
   {
-    header: "Example Header",
-    text: "W Naturze Uśmiechu wierzymy, że piękny uśmiech zaczyna się od zdrowia i naturalnej harmonii. Za każdym sukcesem leczenia stoi nasz doświadczony, pełen zaangażowania zespół specjalistów, którzy dbają nie tylko o rezultaty, ale przede wszystkim o Twój komfort i dobre samopoczucie.",
+    header: "Nowoczesne technologie i precyzyjna diagnostyka",
+    text: "W codziennej pracy wykorzystujemy nowoczesne technologie diagnostyczne i lecznicze, które pozwalają na dokładne planowanie oraz przewidywalne efekty leczenia. Precyzyjna diagnostyka umożliwia wczesne wykrywanie problemów i minimalizację ingerencji. Dzięki temu leczenie jest bezpieczne, skuteczne i dopasowane do indywidualnych potrzeb każdego pacjenta.",
     image: "/photos/v_6.avif",
     alt: "Zespół stomatologów",
     rotation: -12,
   },
   {
-    header: "Example Header",
-    text: "W Naturze Uśmiechu wierzymy, że piękny uśmiech zaczyna się od zdrowia i naturalnej harmonii. Za każdym sukcesem leczenia stoi nasz doświadczony, pełen zaangażowania zespół specjalistów, którzy dbają nie tylko o rezultaty, ale przede wszystkim o Twój komfort i dobre samopoczucie.",
+    header: "Komfort, zaufanie i indywidualne podejście",
+    text: "Wiemy, jak ważne jest poczucie bezpieczeństwa podczas leczenia stomatologicznego. Dlatego dbamy o spokojną atmosferę, jasną komunikację i indywidualne podejście do każdego pacjenta. Każdy plan leczenia omawiamy szczegółowo, odpowiadając na pytania i rozwiewając wątpliwości. Naszym celem jest nie tylko skuteczne leczenie, ale także komfort i zaufanie na każdym etapie współpracy.",
     image: "/photos/v_12.avif",
     alt: "Zdrowy uśmiech pacjenta",
     rotation: -6,

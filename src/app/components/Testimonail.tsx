@@ -40,9 +40,9 @@ const Testimonials = () => {
           >
             <h2 className="text-primary">Dlaczego Natura Uśmiechu ?</h2>
             <p className="text-muted mt-2">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-              faucibus ex sapien vitae pellentesque sem placerat. In id cursus
-              mi pretium tellus duis convallis.
+              Łączymy wiedzę, doświadczenie i nowoczesne technologie, aby
+              zapewnić leczenie na najwyższym poziomie. Każdy zabieg planujemy z
+              dbałością o detale i długofalowe efekty.
             </p>
           </header>
 

@@ -153,7 +153,8 @@ export default function Navbar() {
                 hover:after:w-full"
                 href="/kontakt"
               >
-                Umów wizytę
+                {/* Umów wizytę */}
+                Kontakt
               </Link>
             </li>
           </ul>

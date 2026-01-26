@@ -25,204 +25,259 @@ const data = [
     id: 1,
     title: "Stomatologia zachowawcza",
     content: [
+      { name: "Porada lekarska / wizyta adaptacyjna", price: "150 zł" },
+      { name: "Znieczulenie miejscowe", price: "gratis" },
+      { name: "Wypełnienie w zębie mlecznym", price: "200 zł" },
+      { name: "Dewitalizacja zęba mlecznego", price: "100 zł" },
+      { name: "Leczenie kanałowe zęba mlecznego", price: "200 zł" },
       {
-        name: "Badanie stomatologiczne / wizyta adaptacyjna / porada lekarska",
-        price: "150",
+        name: "Wypełnienie w zębie (w zależności od ilości powierzchni)",
+        price: "350 – 450 zł",
+      },
+      { name: "Licówka kompozytowa / bonding", price: "550 – 650 zł" },
+      { name: "Dewitalizacja zęba", price: "150 zł" },
+      {
+        name: "Leczenie kanałowe – 1 kanał (bez odbudowy)",
+        price: "700 zł",
+      },
+      { name: "Leczenie kanałowe – 2 kanały", price: "850 zł" },
+      { name: "Leczenie kanałowe – 3 kanały", price: "1 100 zł" },
+      { name: "Leczenie kanałowe – 4 kanały", price: "1 250 zł" },
+      {
+        name: "Reendo (poprawienie starego leczenia kanałowego)",
+        price: "+30%",
       },
       {
-        name: "Znieczulenie stomatologiczne",
-        price: "Gratis",
+        name: "Odbudowa po leczeniu kanałowym na włóknie",
+        price: "400 – 500 zł",
       },
       {
-        name: "Wypełnienie kompozytowe przyszyjkowe",
-        price: "300–400",
+        name: "Usunięcie starego wkładu koronowo-korzeniowego",
+        price: "300 – 500 zł",
       },
+      { name: "Zamknięcie perforacji MTA", price: "300 – 450 zł" },
+      { name: "Wybielanie lampą Beyond", price: "900 zł" },
       {
-        name: "Wypełnienie kompozytowe w zębie stałym",
-        price: "400–500",
+        name: "Wybielanie Opalescence (zestaw domowy)",
+        price: "1 000 zł",
       },
+      { name: "Wybielanie Prevdent", price: "1 500 zł" },
       {
-        name: "Licówka kompozytowa / bonding (jeden ząb)",
-        price: "550–650",
-      },
-      {
-        name: "Opatrunek leczniczy",
-        price: "250",
-      },
-      {
-        name: "Wizyta przeciwbólowa",
-        price: "250",
+        name: "Usuwanie przebarwień aparatem Icon",
+        price: "200 zł / ząb",
       },
     ],
   },
+
   {
     id: 2,
-    title: "Stomatologia zachowawcza",
+    title: "Implantologia",
     content: [
+      { name: "Konsultacja implantologiczna", price: "150 zł" },
       {
-        name: "Badanie stomatologiczne / wizyta adaptacyjna / porada lekarska",
-        price: "150",
+        name: "Konsultacja implantologiczna z wyciskami, CBCT i planem leczenia",
+        price: "400 zł",
       },
       {
-        name: "Znieczulenie stomatologiczne",
-        price: "Gratis",
+        name: "Wprowadzenie implantu + szablon nawigacyjny (1 punkt)",
+        price: "3 500 zł",
       },
+      { name: "Każdy kolejny punkt", price: "+50 zł" },
       {
-        name: "Wypełnienie kompozytowe przyszyjkowe",
-        price: "300–400",
+        name: "Korona porcelanowa z łącznikiem",
+        price: "3 000 – 4 000 zł",
       },
+      { name: "Proteza oparta na 2 implantach", price: "wycena indywidualna" },
+      { name: "Proteza oparta na 4 implantach", price: "wycena indywidualna" },
       {
-        name: "Wypełnienie kompozytowe w zębie stałym",
-        price: "400–500",
+        name: "Podniesienie zatoki (z biomateriałem)",
+        price: "2 000 – 5 000 zł",
       },
-      {
-        name: "Licówka kompozytowa / bonding (jeden ząb)",
-        price: "550–650",
-      },
-      {
-        name: "Opatrunek leczniczy",
-        price: "250",
-      },
-      {
-        name: "Wizyta przeciwbólowa",
-        price: "250",
-      },
+      { name: "Odbudowa kości", price: "wycena indywidualna" },
     ],
   },
+
   {
     id: 3,
-    title: "Stomatologia zachowawcza",
+    title: "Chirurgia stomatologiczna",
     content: [
+      { name: "Konsultacja chirurgiczna", price: "150 zł" },
+      { name: "Usunięcie zęba mlecznego", price: "200 zł" },
+      { name: "Usunięcie zęba stałego", price: "350 – 500 zł" },
       {
-        name: "Badanie stomatologiczne / wizyta adaptacyjna / porada lekarska",
-        price: "150",
+        name: "Usunięcie zęba poprzez dłutowanie wewnątrzzębodołowe",
+        price: "od 500 zł",
       },
       {
-        name: "Znieczulenie stomatologiczne",
-        price: "Gratis",
+        name: "Usunięcie górnego zęba mądrości",
+        price: "od 600 zł",
       },
       {
-        name: "Wypełnienie kompozytowe przyszyjkowe",
-        price: "300–400",
+        name: "Usunięcie dolnego zęba mądrości",
+        price: "od 800 zł",
       },
       {
-        name: "Wypełnienie kompozytowe w zębie stałym",
-        price: "400–500",
+        name: "Usunięcie zęba częściowo zatrzymanego",
+        price: "800 – 1 500 zł",
       },
       {
-        name: "Licówka kompozytowa / bonding (jeden ząb)",
-        price: "550–650",
+        name: "Usunięcie zęba całkowicie zatrzymanego",
+        price: "1 000 – 2 000 zł",
+      },
+      { name: "Nacięcie ropnia", price: "200 zł" },
+      { name: "Szycie chirurgiczne", price: "100 zł" },
+      { name: "Wydłużenie korony zęba", price: "350 – 400 zł" },
+      {
+        name: "Plastyka połączenia ustno-zatokowego",
+        price: "600 – 800 zł",
+      },
+      { name: "Plastyka wędzidełka", price: "500 zł" },
+      {
+        name: "Odsłonięcie zatrzymanego zęba z przyklejeniem zamka",
+        price: "od 1 200 zł",
+      },
+      { name: "Usunięcie kaptura dziąsłowego", price: "300 zł" },
+      { name: "Pobranie wycinka do badania hist-pat", price: "400 zł" },
+      {
+        name: "Wycięcie zmiany błony śluzowej jamy ustnej",
+        price: "400 – 600 zł",
       },
       {
-        name: "Opatrunek leczniczy",
-        price: "250",
+        name: "Resekcja wierzchołka korzenia",
+        price: "od 1 200 zł",
       },
       {
-        name: "Wizyta przeciwbólowa",
-        price: "250",
+        name: "Pourazowe zaopatrzenie zwichniętego zęba",
+        price: "400 zł",
+      },
+      {
+        name: "Pogłębienie przedsionka jamy ustnej",
+        price: "600 zł",
+      },
+      { name: "Biostymulacja laserem", price: "100 zł" },
+      { name: "Wyłuszczenie torbieli", price: "wycena indywidualna" },
+      {
+        name: "Zabiegi z przeszczepem tkanek i augmentacją kości",
+        price: "wycena indywidualna",
+      },
+      {
+        name: "A-PRF / I-PRF (fibryna bogatopłytkowa)",
+        price: "300 – 500 zł",
+      },
+      {
+        name: "Płukanie zębodołu z aplikacją leku",
+        price: "50 zł",
       },
     ],
   },
+
   {
     id: 4,
-    title: "Stomatologia zachowawcza",
+    title: "Protetyka",
     content: [
+      { name: "Konsultacja protetyczna", price: "150 zł" },
       {
-        name: "Badanie stomatologiczne / wizyta adaptacyjna / porada lekarska",
-        price: "150",
+        name: "Korona pełnoceramiczna / na podbudowie cyrkonowej",
+        price: "1 800 zł",
+      },
+      { name: "Licówka pełnoceramiczna", price: "1 800 zł" },
+      {
+        name: "Korona tymczasowa (laboratoryjna)",
+        price: "300 zł",
+      },
+      { name: "Proteza szkieletowa", price: "3 000 zł" },
+      { name: "Proteza akrylowa ruchoma", price: "1 600 zł" },
+      { name: "Proteza akrylowa całkowita", price: "2 200 zł" },
+      {
+        name: "Proteza na zatrzaskach / zasuwach / teleskopach",
+        price: "wycena indywidualna",
       },
       {
-        name: "Znieczulenie stomatologiczne",
-        price: "Gratis",
+        name: "Wkład koronowo-korzeniowy metalowy",
+        price: "450 – 500 zł",
       },
       {
-        name: "Wypełnienie kompozytowe przyszyjkowe",
-        price: "300–400",
+        name: "Wkład koronowo-korzeniowy pełnoceramiczny",
+        price: "900 zł",
       },
-      {
-        name: "Wypełnienie kompozytowe w zębie stałym",
-        price: "400–500",
-      },
-      {
-        name: "Licówka kompozytowa / bonding (jeden ząb)",
-        price: "550–650",
-      },
-      {
-        name: "Opatrunek leczniczy",
-        price: "250",
-      },
-      {
-        name: "Wizyta przeciwbólowa",
-        price: "250",
-      },
+      { name: "Onlay kompozytowy", price: "800 zł" },
+      { name: "Onlay pełnoceramiczny", price: "1 500 zł" },
     ],
   },
+
   {
     id: 5,
-    title: "Stomatologia zachowawcza",
+    title: "Ortodoncja",
     content: [
+      { name: "Konsultacja ortodontyczna", price: "200 zł" },
       {
-        name: "Badanie stomatologiczne / wizyta adaptacyjna / porada lekarska",
-        price: "150",
+        name: "Konsultacja ortodontyczna z wyciskami i RTG",
+        price: "400 zł",
       },
       {
-        name: "Znieczulenie stomatologiczne",
-        price: "Gratis",
+        name: "Aparat stały metalowy (1 łuk)",
+        price: "3 500 zł",
       },
       {
-        name: "Wypełnienie kompozytowe przyszyjkowe",
-        price: "300–400",
+        name: "Aparat stały estetyczny (1 łuk)",
+        price: "5 000 zł",
+      },
+      { name: "Aparat ruchomy", price: "1 000 – 1 500 zł" },
+      {
+        name: "Wizyta kontrolna – aparat ruchomy",
+        price: "150 zł",
       },
       {
-        name: "Wypełnienie kompozytowe w zębie stałym",
-        price: "400–500",
+        name: "Wizyta kontrolna – aparat stały (1 łuk)",
+        price: "200 zł",
       },
       {
-        name: "Licówka kompozytowa / bonding (jeden ząb)",
-        price: "550–650",
+        name: "Wizyta kontrolna – aparat stały (2 łuki)",
+        price: "250 zł",
       },
       {
-        name: "Opatrunek leczniczy",
-        price: "250",
+        name: "Wizyta kontrolna – bez wymiany łuków",
+        price: "100 zł",
       },
       {
-        name: "Wizyta przeciwbólowa",
-        price: "250",
+        name: "Zdjęcie aparatu stałego (2 łuki) + retainery",
+        price: "2 300 zł",
+      },
+      {
+        name: "Zdjęcie aparatu stałego (1 łuk) + retainer",
+        price: "1 150 zł",
       },
     ],
   },
+
   {
     id: 6,
-    title: "Stomatologia zachowawcza",
+    title: "Periodontologia",
     content: [
       {
-        name: "Badanie stomatologiczne / wizyta adaptacyjna / porada lekarska",
-        price: "150",
+        name: "Skaling, piaskowanie, fluoryzacja",
+        price: "350 zł",
       },
+      { name: "Skaling", price: "250 zł" },
+      { name: "Fluoryzacja", price: "100 zł" },
       {
-        name: "Znieczulenie stomatologiczne",
-        price: "Gratis",
+        name: "Kiretaż zamknięty (połowa łuku)",
+        price: "300 zł",
       },
+    ],
+  },
+
+  {
+    id: 7,
+    title: "Radiologia",
+    content: [
+      { name: "RTG punktowe", price: "40 zł" },
+      { name: "RTG pantomograficzne", price: "100 zł" },
       {
-        name: "Wypełnienie kompozytowe przyszyjkowe",
-        price: "300–400",
+        name: "Tomografia szczęki i żuchwy",
+        price: "300 zł",
       },
-      {
-        name: "Wypełnienie kompozytowe w zębie stałym",
-        price: "400–500",
-      },
-      {
-        name: "Licówka kompozytowa / bonding (jeden ząb)",
-        price: "550–650",
-      },
-      {
-        name: "Opatrunek leczniczy",
-        price: "250",
-      },
-      {
-        name: "Wizyta przeciwbólowa",
-        price: "250",
-      },
+      { name: "Tomografia jednego rejonu", price: "150 zł" },
     ],
   },
 ];

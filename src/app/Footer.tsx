@@ -5,6 +5,7 @@ import EnvelopeIcon from "./components/svgs/EnvelopeIcon";
 import PinIcon from "./components/svgs/PinIcon";
 import PhoneIcon from "./components/svgs/PhoneIcon";
 import Logo from "./components/svgs/Logo";
+import contactData from "./contactData";
 
 const Footer = () => {
   return (
@@ -75,21 +76,21 @@ const Footer = () => {
               <ul className="grid  grid-cols-[auto_1fr] gap-x-2 gap-y-2 items-center">
                 <li className="contents">
                   <PhoneIcon className="text-black" width={24} height={24} />{" "}
-                  <a href="tel:+48123123123">+48 123 123 123</a>
+                  <a href="tel:+48123123123">{contactData.phone}</a>
                 </li>
 
                 <li className="contents">
                   <EnvelopeIcon className="text-black" width={24} height={24} />
 
-                  <a href="mailto:kontakt@firma.pl">kontakt@firma.pl</a>
+                  <a href="mailto:kontakt@firma.pl">{contactData.email}</a>
                 </li>
 
                 <li className="contents">
                   <PinIcon className="text-black" width={24} height={24} />
                   <span>
-                    ul. Przykładowa 12,
+                    {contactData.address.line1}
                     <br />
-                    00-000 Warszawa
+                    {contactData.address.line2}
                   </span>
                 </li>
               </ul>

@@ -4,6 +4,7 @@ import Title from "../components/Title";
 import PhoneIcon from "../components/svgs/PhoneIcon";
 import EnvelopeIcon from "../components/svgs/EnvelopeIcon";
 import PinIcon from "../components/svgs/PinIcon";
+import contactData from "../contactData";
 
 const Contact = () => {
   return (
@@ -30,7 +31,7 @@ const Contact = () => {
                         height={24}
                         filled
                       />
-                      <a href="tel:+48123123123">+48 123 123 123</a>
+                      <a href="tel:+48123123123">{contactData.phone}</a>
                     </li>
 
                     {/* <li className="contents"> */}
@@ -41,7 +42,9 @@ const Contact = () => {
                         height={24}
                         filled
                       />
-                      <a href="mailto:kontakt@firma.pl">kontakt@firma.pl</a>
+                      <a href={`mailto:${contactData.email}`}>
+                        {contactData.email}
+                      </a>
                     </li>
 
                     {/* <li className="contents"> */}
@@ -52,7 +55,9 @@ const Contact = () => {
                         height={24}
                         filled
                       />
-                      <span>ul. Przykładowa 12, 00-000 Warszawa</span>
+                      <span>
+                        {contactData.address.line1} {contactData.address.line2}
+                      </span>
                     </li>
                   </ul>
                 </address>
