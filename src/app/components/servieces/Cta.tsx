@@ -21,7 +21,7 @@ const Cta = () => {
 
           <div className="inline-flex w-full mt-6 h-20 max-w-100">
             <a
-              href="#"
+              href="/kontakt"
               className="inline-flex items-center justify-center w-full px-6 py-2 duration-300 rounded-lg bg-primary text-xl text-white focus:ring focus:ring-gray-300 focus:ring-opacity-80"
             >
               Zarezerwuj termin
