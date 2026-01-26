@@ -77,7 +77,7 @@ const Steps = ({
           </div>
 
           <img
-            className="lg:w-3/5 md:w-1/2 object-cover shadow-md object-center rounded-lg md:mt-0 mt-12"
+            className="lg:w-3/5 md:w-1/2 2xl:max-h-150 object-cover shadow-md object-center rounded-lg md:mt-0 mt-12 square"
             src={imageUrl}
             alt="step"
           />

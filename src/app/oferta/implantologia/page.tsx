@@ -20,7 +20,7 @@ const Implantologia = () => {
           header: "Implantologia – trwałe rozwiązanie braków zębowych",
           content:
             "Implantologia to nowoczesna i skuteczna metoda uzupełniania braków zębowych, która pozwala przywrócić pełną funkcję oraz estetykę uśmiechu. Implanty stomatologiczne zastępują naturalny korzeń zęba, zapewniając stabilność i komfort porównywalny z naturalnym uzębieniem. Dzięki precyzyjnemu planowaniu oraz sprawdzonym technologiom leczenie jest bezpieczne, przewidywalne i daje długotrwałe efekty.",
-          imgUrl: "https://dummyimage.com/720x600",
+          imgUrl: "/photos/a_5.avif",
         }}
         bg="bg-white"
       />
@@ -54,7 +54,7 @@ const Implantologia = () => {
           content:
             "Na implancie osadzana jest estetyczna korona, która przywraca pełną funkcję i naturalny wygląd zęba.",
         }}
-        imageUrl="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        imageUrl="/photos/a_9.avif"
       />
       <Cards
         bg="bg-primary/10"
@@ -83,7 +83,7 @@ const Implantologia = () => {
           header: "Pewność uśmiechu i komfort na lata",
           content:
             "Leczenie implantologiczne pozwala odzyskać nie tylko pełną funkcję żucia, ale również pewność siebie i swobodę uśmiechu. Implanty stanowią stabilne i estetyczne rozwiązanie, które nie różni się od naturalnych zębów. Dzięki indywidualnemu podejściu oraz nowoczesnym metodom leczenia pacjenci mogą cieszyć się komfortem, trwałością i naturalnym wyglądem przez wiele lat.",
-          imgUrl: "https://dummyimage.com/720x600",
+          imgUrl: "/photos/a_12.avif",
         }}
         bg="bg-white"
       />

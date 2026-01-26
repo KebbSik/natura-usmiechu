@@ -33,7 +33,7 @@ const GridList = ({
           {gridElements.map((el, index) => (
             <div
               key={index}
-              className="space-y-3 max-w-100 justify-self-center "
+              className="space-y-3 max-w-100 justify-self-center p-4 rounded-2xl border-3 border-primary/50 "
             >
               <span className="inline-block p-3 text-white  bg-primary rounded-full ">
                 <svg

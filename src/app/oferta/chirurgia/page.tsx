@@ -19,7 +19,7 @@ const Chirurgia = () => {
           header: "Chirurgia stomatologiczna – precyzja i bezpieczeństwo",
           content:
             "Chirurgia stomatologiczna obejmuje zabiegi, które wymagają szczególnej precyzji oraz doświadczenia lekarza. Wykonujemy je z zachowaniem najwyższych standardów bezpieczeństwa, dbając o komfort pacjenta na każdym etapie leczenia. Dzięki nowoczesnym technologiom oraz starannemu planowaniu zabiegi chirurgiczne są dziś mniej inwazyjne, przewidywalne i pozwalają na sprawne gojenie oraz szybki powrót do codziennego funkcjonowania.",
-          imgUrl: "https://dummyimage.com/720x600",
+          imgUrl: "/photos/a_21.avif",
         }}
         bg="bg-white"
       />
@@ -29,7 +29,7 @@ const Chirurgia = () => {
             header: "Zakres zabiegów chirurgicznych",
             content:
               "W ramach chirurgii stomatologicznej wykonujemy między innymi ekstrakcje zębów, w tym zębów zatrzymanych i ósemek, a także zabiegi przygotowujące jamę ustną do dalszego leczenia. Każdy przypadek analizujemy indywidualnie, dobierając odpowiednią metodę postępowania. Naszym celem jest skuteczne leczenie przy jednoczesnym ograniczeniu dyskomfortu oraz skróceniu czasu rekonwalescencji pacjenta.",
-            imgUrl: "https://dummyimage.com/720x600",
+            imgUrl: "/photos/a_16.avif",
           }}
           bg="bg-white"
         />
@@ -40,7 +40,7 @@ const Chirurgia = () => {
           header: "Komfortowe leczenie i opieka po zabiegu",
           content:
             "Podczas zabiegów chirurgicznych szczególną uwagę przykładamy do skutecznego znieczulenia oraz komfortu pacjenta. Każdy etap leczenia jest dokładnie omawiany, a po zabiegu pacjent otrzymuje jasne zalecenia dotyczące gojenia i dalszej pielęgnacji. Dzięki temu proces rekonwalescencji przebiega spokojnie, a pacjent czuje się bezpiecznie i pod stałą opieką specjalistów.",
-          imgUrl: "https://dummyimage.com/720x600",
+          imgUrl: "/photos/a_4.avif",
         }}
         bg="bg-primary/10"
       />

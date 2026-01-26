@@ -21,7 +21,7 @@ const Protetyka = () => {
           header: "Protetyka – odbudowa funkcji i estetyki uśmiechu",
           content:
             "Protetyka stomatologiczna zajmuje się odbudową braków zębowych oraz rekonstrukcją zębów uszkodzonych. Jej celem jest przywrócenie prawidłowej funkcji żucia, mowy oraz estetyki uśmiechu. Odpowiednio dobrane uzupełnienia protetyczne poprawiają komfort codziennego życia i zapobiegają dalszym problemom w jamie ustnej. Każde leczenie planujemy indywidualnie, z uwzględnieniem potrzeb i oczekiwań pacjenta.",
-          imgUrl: "https://dummyimage.com/720x600",
+          imgUrl: "/photos/a_10.avif",
         }}
         bg="bg-white"
       />
@@ -61,7 +61,7 @@ const Protetyka = () => {
           header: "Naturalny wygląd i codzienny komfort",
           content:
             "Nowoczesna protetyka pozwala uzyskać naturalny wygląd uzupełnień, które doskonale harmonizują z resztą uzębienia. Stosujemy wysokiej jakości materiały oraz precyzyjne techniki wykonania, dzięki czemu prace protetyczne są trwałe i wygodne w użytkowaniu. Odpowiednio dopasowane uzupełnienia poprawiają estetykę uśmiechu, komfort jedzenia oraz pewność siebie pacjenta.",
-          imgUrl: "https://dummyimage.com/720x600",
+          imgUrl: "/photos/a_8.avif",
         }}
         bg="bg-white"
       />

@@ -21,7 +21,7 @@ const MediaSection = ({ bg, reverse, data }: MediaSectionProps) => {
         >
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
             <img
-              className="object-cover object-center rounded shadow-md"
+              className="object-cover object-center aspect-square rounded shadow-md"
               alt="hero"
               src={data.imgUrl}
             />

@@ -51,11 +51,18 @@ const Footer = () => {
                   </a>
                 </li>
                 <li
-                  className="bg-social rounded-full icon-size
+                  className="bg-social rounded-full icon-size flex justify-center items-center
             "
                 >
-                  <a href="/" aria-label="">
-                    <img className="w-full" src="/icons/b.svg" alt="" />
+                  <a
+                    href="https://www.instagram.com/natura_usmiechu/"
+                    aria-label="instagram"
+                  >
+                    <img
+                      className="w-6.5"
+                      src="/icons/instagram.svg"
+                      alt="Instagram"
+                    />
                   </a>
                 </li>
               </ul>
@@ -63,7 +70,7 @@ const Footer = () => {
           </section>
 
           {/* Dane kontaktowe */}
-          <section className="md:w-1/2">
+          <section className="md:w-1/2 mt-auto">
             <address className="flex justify-center">
               <ul className="grid  grid-cols-[auto_1fr] gap-x-2 gap-y-2 items-center">
                 <li className="contents">

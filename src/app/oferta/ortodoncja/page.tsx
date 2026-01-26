@@ -22,7 +22,7 @@ const Ortodoncja = () => {
           header: "Ortodoncja – zdrowy i harmonijny uśmiech",
           content:
             "Ortodoncja zajmuje się diagnozowaniem oraz leczeniem wad zgryzu i nieprawidłowego ustawienia zębów. Prawidłowe leczenie ortodontyczne wpływa nie tylko na estetykę uśmiechu, ale również na zdrowie jamy ustnej, komfort żucia oraz prawidłową wymowę. Dzięki nowoczesnym metodom i indywidualnemu podejściu możliwe jest skuteczne leczenie zarówno u dzieci, jak i dorosłych pacjentów.",
-          imgUrl: "https://dummyimage.com/720x600",
+          imgUrl: "/photos/a_11.avif",
         }}
         bg="bg-white"
       />{" "}
@@ -76,14 +76,14 @@ const Ortodoncja = () => {
           content:
             "Po zakończeniu leczenia stosujemy aparaty retencyjne, aby utrwalić osiągnięte efekty.",
         }}
-        imageUrl="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        imageUrl="/photos/a_13.avif"
       />
       <MediaSection
         data={{
           header: "Efekty, które procentują na lata",
           content:
             "Leczenie ortodontyczne to inwestycja w zdrowie i estetykę uśmiechu na długie lata. Odpowiednio wyprostowane zęby ułatwiają utrzymanie higieny jamy ustnej, poprawiają funkcję żucia oraz zwiększają pewność siebie. Dzięki kompleksowej opiece i nowoczesnym metodom leczenia pacjenci mogą cieszyć się trwałymi, naturalnymi efektami.",
-          imgUrl: "https://dummyimage.com/720x600",
+          imgUrl: "/photos/a_7.avif",
         }}
         bg="bg-white"
       />

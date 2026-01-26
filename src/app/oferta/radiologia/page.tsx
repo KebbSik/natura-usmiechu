@@ -22,7 +22,7 @@ const Radiologia = () => {
             header: "Radiologia – precyzyjna diagnostyka stomatologiczna",
             content:
               "Radiologia stomatologiczna odgrywa kluczową rolę w prawidłowej diagnostyce i planowaniu leczenia. Badania obrazowe pozwalają dokładnie ocenić stan zębów, kości oraz tkanek otaczających, często jeszcze przed pojawieniem się objawów bólowych. Korzystamy z nowoczesnego sprzętu radiologicznego, który zapewnia wysoką jakość obrazu przy zachowaniu bezpieczeństwa i minimalnej dawki promieniowania dla pacjenta.",
-            imgUrl: "https://dummyimage.com/720x600",
+            imgUrl: "/photos/a_17.avif",
           }}
           bg="bg-white"
         />

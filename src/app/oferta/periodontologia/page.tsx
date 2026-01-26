@@ -19,7 +19,7 @@ const Periodontologia = () => {
           header: "Periodontologia – zdrowe dziąsła i stabilne zęby",
           content:
             "Periodontologia zajmuje się diagnozowaniem i leczeniem chorób dziąseł oraz tkanek otaczających zęby. Nieleczone stany zapalne mogą prowadzić do rozchwiania zębów, a nawet ich utraty. Wczesna diagnostyka oraz odpowiednio dobrane leczenie pozwalają zahamować rozwój choroby i przywrócić zdrowie przyzębia. Dbamy o komfort pacjenta oraz skuteczność terapii na każdym etapie leczenia.",
-          imgUrl: "https://dummyimage.com/720x600",
+          imgUrl: "/photos/a_14.avif",
         }}
         bg="bg-white"
       />
@@ -30,7 +30,7 @@ const Periodontologia = () => {
             header: "Skuteczne leczenie i profilaktyka chorób przyzębia",
             content:
               "Leczenie periodontologiczne skupia się na usunięciu stanu zapalnego oraz odbudowie zdrowych warunków w jamie ustnej. Wykonujemy zabiegi takie jak skaling, kiretaż oraz specjalistyczne procedury wspierające regenerację tkanek. Równie istotna jest profilaktyka i edukacja pacjenta, które pomagają utrzymać zdrowe dziąsła i zapobiegać nawrotom choroby.",
-            imgUrl: "https://dummyimage.com/720x600",
+            imgUrl: "/photos/v_26.avif",
           }}
           bg="bg-white"
         />

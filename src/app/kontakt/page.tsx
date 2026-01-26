@@ -90,11 +90,18 @@ const Contact = () => {
                     </a>
                   </li>
                   <li
-                    className="bg-primary rounded-full icon-size
+                    className="bg-primary rounded-full icon-size flex justify-center items-center
             "
                   >
-                    <a href="/" aria-label="">
-                      <img className="w-full" src="/icons/b.svg" alt="" />
+                    <a
+                      href="https://www.instagram.com/natura_usmiechu/"
+                      aria-label="instagram"
+                    >
+                      <img
+                        className="w-6.5"
+                        src="/icons/instagram.svg"
+                        alt=""
+                      />
                     </a>
                   </li>
                 </ul>
