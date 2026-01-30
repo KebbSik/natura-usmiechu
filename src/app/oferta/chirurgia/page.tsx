@@ -23,7 +23,7 @@ const Chirurgia = () => {
         }}
         bg="bg-white"
       />
-      <div className="px-15 py-10 bg-primary/10 ">
+      <div className="px-6 py-10 bg-primary/10 ">
         <MediaSection
           data={{
             header: "Zakres zabiegów chirurgicznych",
@@ -44,7 +44,7 @@ const Chirurgia = () => {
         }}
         bg="bg-primary/10"
       />
-      <div className="px-15 py-10 bg-white ">
+      <div className="px-6 py-10 bg-white ">
         <GridList
           reverse
           bg="bg-primary/10"

@@ -25,7 +25,7 @@ const Protetyka = () => {
         }}
         bg="bg-white"
       />
-      <div className="px-15 py-10 bg-white ">
+      <div className="px-6 py-10 bg-white ">
         <GridListSm
           reverse
           bg="bg-primary/10"

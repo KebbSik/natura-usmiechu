@@ -22,9 +22,9 @@ const SvgComponent = ({
     <path
       d="M9.54448 38.4495C9.54448 38.4495 1.29756 54.8588 13.1105 75.3631C24.9234 95.8673 12.1936 47.8673 31.0445 47.8673C49.8955 47.8673 37.9843 95.3673 48.5445 75.3631C59.1048 55.3588 52.5445 38.4495 52.5445 38.4495C73.0446 14.8673 54.9081 -7.10392 31.0445 4.86728C5.96762 -6.10651 -8.45552 14.8671 9.54448 38.4495Z"
       stroke="currentColor"
-      stroke-width="3"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <ellipse
       cx="22.5035"

@@ -23,7 +23,7 @@ const Periodontologia = () => {
         }}
         bg="bg-white"
       />
-      <div className="px-15 py-10 bg-primary/10 ">
+      <div className="px-6 py-10 bg-primary/10 ">
         <MediaSection
           reverse
           data={{

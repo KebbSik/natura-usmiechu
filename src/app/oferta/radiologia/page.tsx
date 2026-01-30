@@ -16,7 +16,7 @@ const Radiologia = () => {
       <Header objectFit="center-50%" imageUrl="/photos/v_14.avif">
         Radiologia
       </Header>
-      <div className="px-15 py-10 bg-primary/10 ">
+      <div className="px-6 py-10 bg-primary/10 ">
         <MediaSection
           data={{
             header: "Radiologia – precyzyjna diagnostyka stomatologiczna",
@@ -48,7 +48,7 @@ const Radiologia = () => {
           },
         ]}
       />
-      <div className="px-15 py-10  ">
+      <div className="px-6 py-10  ">
         <MediaText
           bg="bg-primary/10"
           data={{

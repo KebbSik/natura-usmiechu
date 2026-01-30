@@ -27,7 +27,7 @@ const Zachowawcza = () => {
         />
 
         <div
-          className="px-15 py-10 
+          className="px-6 py-10 
           bg-linear-to-b
         from-white
           to-primary/10 "
@@ -63,7 +63,7 @@ const Zachowawcza = () => {
           />
         </div>
 
-        <div className="px-15 py-10 bg-primary/10 ">
+        <div className="px-6 py-10 bg-primary/10 ">
           <MediaText
             bg="bg-white"
             data={{
