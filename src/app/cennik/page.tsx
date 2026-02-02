@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Header from "../components/Header";
 import Image from "next/image";
 import { it } from "node:test";
 import Title from "../components/Title";
 import VisitUs from "../components/VisitUs";
-import Cta from "../components/servieces/Cta";
+import Cta from "../components/Cta";
 
 interface Props {
   title: string;
@@ -291,7 +291,7 @@ function AccordionItem({
   return (
     <>
       <div
-        className={`bg-white rounded-full overflow-hidden  border border-primary/60 transition-all duration-normal
+        className={`bg-white rounded-full overflow-hidden  border border-primary/60 transition-all duration-normal hover:bg-primary/20 
          `}
       >
         <div
@@ -313,11 +313,11 @@ function AccordionItem({
         </div>
       </div>
       <div
-        className={`  md:px-4 overflow-hidden transition-all duration-slow ${
-          isExpanded ? "max-h-200 " : "max-h-0 "
+        className={`  md:px-4 overflow-hidden transition-all duration-500 ${
+          isExpanded ? "max-h-1000" : "max-h-0 "
         }`}
       >
-        <table className="w-full p-2">
+        <table className="w-full p-2 my-2 ">
           <thead>
             <tr className="bg-primary/30">
               <th className="text-start p-1.5" scope="col">
@@ -344,18 +344,31 @@ function AccordionItem({
     </>
   );
 }
+
 const PriceList = () => {
   const [expandedId, setExpandedId] = useState<number | null>(null);
+
+  const itemRefs = useRef<Record<number, HTMLDivElement | null>>({});
+
   const toggleExpand = (id: number) => {
     if (expandedId === id) {
       setExpandedId(null);
-    } else {
-      setExpandedId(null);
-      // setTimeout(() => {
-      setExpandedId(id);
-      // }, 100);
+      return;
     }
-    // setExpandedId(expandedId === id ? null : id);
+
+    setExpandedId(id);
+
+    setTimeout(() => {
+      requestAnimationFrame(() => {
+        const el = itemRefs.current[id];
+        if (!el) return;
+
+        const yOffset = -100; // wysokość headera
+        const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+      });
+    }, 550);
   };
 
   return (
@@ -368,13 +381,20 @@ const PriceList = () => {
           <Title heading={"Zapoznaj się z naszym cennikiem"}></Title>
           <div className="flex flex-col gap-1  mx-auto py-10">
             {data.map((item) => (
-              <AccordionItem
+              <div
                 key={item.id}
-                title={item.title}
-                content={item.content}
-                isExpended={expandedId === item.id ? true : false}
-                onToggle={() => toggleExpand(item.id)}
-              />
+                ref={(el) => {
+                  itemRefs.current[item.id] = el;
+                }}
+              >
+                <AccordionItem
+                  // key={item.id}
+                  title={item.title}
+                  content={item.content}
+                  isExpended={expandedId === item.id ? true : false}
+                  onToggle={() => toggleExpand(item.id)}
+                />
+              </div>
             ))}
           </div>
         </div>

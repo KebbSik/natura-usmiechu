@@ -9,9 +9,9 @@ import contactData from "./contactData";
 
 const Footer = () => {
   return (
-    <footer className="   bg-footer py-5">
+    <footer className="   bg-footer pt-8 pb-2">
       <div className="container">
-        <div className=" flex flex-col md:flex-row  md:flex-wrap gap-y-10">
+        <div className=" flex flex-col md:flex-row  md:flex-wrap gap-y-10 py-2">
           <section className=" flex flex-col items-center md:w-1/2">
             {/*  Logo  */}
             <div className="w-40  md:w-50 md:h-25  py-5 flex items-center">
@@ -30,14 +30,14 @@ const Footer = () => {
                     rel="noopener noreferrer"
                   >
                     <img
-                      className="icon-size bg-social rounded-full p-1 "
+                      className="icon-size bg-social  rounded-lg p-1 hover:bg-social/90 "
                       src="/icons/facebook.svg"
-                      alt="facebook"
+                      alt="Facebook"
                     />
                   </a>
                 </li>
 
-                <li className="bg-social rounded-full ">
+                <li>
                   <a
                     href="https://www.znanylekarz.pl/placowki/natura-usmiechu-gabinet-stomatologiczny"
                     aria-label="znany lekarz"
@@ -45,14 +45,14 @@ const Footer = () => {
                     rel="noopener noreferrer"
                   >
                     <img
-                      className="icon-size bg-social rounded-full p-1 "
+                      className="icon-size bg-social hover:bg-social/90 rounded-lg p-1 "
                       src="/icons/star.svg"
-                      alt=""
+                      alt="Znany lekarz"
                     />
                   </a>
                 </li>
                 <li
-                  className="bg-social rounded-full icon-size flex justify-center items-center
+                  className="bg-social hover:bg-social/90 rounded-lg icon-size flex justify-center items-center
             "
                 >
                   <a
@@ -72,7 +72,7 @@ const Footer = () => {
 
           {/* Dane kontaktowe */}
           <section className="md:w-1/2 mt-auto">
-            <address className="flex justify-center">
+            <address className="flex justify-center not-italic">
               <ul className="grid  grid-cols-[auto_1fr] gap-x-2 gap-y-2 items-center">
                 <li className="contents">
                   <PhoneIcon className="text-black" width={24} height={24} />{" "}

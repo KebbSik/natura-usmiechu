@@ -3,6 +3,7 @@ import Image from "next/image";
 import { reverse } from "dns";
 import servicesProps from "@/app/components/servieces/servicesProps";
 import { headers } from "next/headers";
+import AnimatedSection from "../AnimatedSection";
 
 interface MediaSectionProps extends servicesProps {
   data: {
@@ -14,15 +15,17 @@ interface MediaSectionProps extends servicesProps {
 const MediaText = ({ bg, reverse, data }: MediaSectionProps) => {
   return (
     <>
-      <section className={`section-padding ${bg} rounded-2xl shadow-md`}>
-        <div className="container">
-          <div className="w-full   ">
-            <h3 className="rounded-lg">{data.header}</h3>
+      <AnimatedSection direction={"bottom"} range={40}>
+        <section className={`section-padding ${bg} rounded-2xl shadow-md`}>
+          <div className="container">
+            <div className="w-full   ">
+              <h3 className="rounded-lg">{data.header}</h3>
 
-            <p className="mt-6 rounded-lg">{data.content}</p>
+              <p className="mt-6 rounded-lg">{data.content}</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </AnimatedSection>
     </>
   );
 };

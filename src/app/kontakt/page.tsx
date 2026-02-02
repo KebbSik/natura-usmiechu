@@ -5,6 +5,7 @@ import PhoneIcon from "../components/svgs/PhoneIcon";
 import EnvelopeIcon from "../components/svgs/EnvelopeIcon";
 import PinIcon from "../components/svgs/PinIcon";
 import contactData from "../contactData";
+import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
   return (
@@ -21,7 +22,7 @@ const Contact = () => {
             <div className="flex flex-col justify-around items-center   gap-10">
               {/* Dane kontaktowe */}
               <section>
-                <address className="flex ">
+                <address className="flex not-italic">
                   <ul className="flex flex-col gap-7 items-center md:items-start">
                     {/* <li className="contents"> */}
                     <li className="flex gap-3">
@@ -73,14 +74,14 @@ const Contact = () => {
                       rel="noopener noreferrer"
                     >
                       <img
-                        className="icon-size bg-primary rounded-full p-1 "
+                        className="icon-size bg-primary hover:bg-primary/80 transition-all duration-200 rounded-lg p-1 "
                         src="/icons/facebook.svg"
                         alt="facebook"
                       />
                     </a>
                   </li>
 
-                  <li className="bg-primary rounded-full ">
+                  <li className=" rounded-lg ">
                     <a
                       href="https://www.znanylekarz.pl/placowki/natura-usmiechu-gabinet-stomatologiczny"
                       aria-label="znanly lekarz"
@@ -88,22 +89,19 @@ const Contact = () => {
                       rel="noopener noreferrer"
                     >
                       <img
-                        className="icon-size bg-primary rounded-full p-1 "
+                        className="icon-size bg-primary hover:bg-primary/80 transition-all duration-200 rounded-lg p-1 "
                         src="/icons/star.svg"
                         alt=""
                       />
                     </a>
                   </li>
-                  <li
-                    className="bg-primary rounded-full icon-size flex justify-center items-center
-            "
-                  >
+                  <li className="bg-primary hover:bg-primary/80 transition-all duration-200   rounded-lg icon-size flex justify-center items-center">
                     <a
                       href="https://www.instagram.com/natura_usmiechu/"
                       aria-label="instagram"
                     >
                       <img
-                        className="w-6.5"
+                        className="w-6.5 "
                         src="/icons/instagram.svg"
                         alt=""
                       />
@@ -113,95 +111,7 @@ const Contact = () => {
               </nav>
             </div>
             {/* Formularz */}
-            <div className="flex flex-col gap-5 max-w-500">
-              <p className="text-center md:text-start">
-                Wypełnij formularz, a my odezwiemy się do Ciebie w krótkim
-                czasie
-              </p>
-              <form className="flex w-full justify-center" method="post ">
-                <fieldset className="flex flex-col gap-3  w-full max-w-120">
-                  {/* <legend>Formularz kontaktowy</legend> */}
-
-                  <div>
-                    <label htmlFor="name" className="sr-only">
-                      Imię
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Imię"
-                      required
-                      className="border border-primary/30 rounded-sm px-2 py-1 w-full focus:outline-primary"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="sr-only">
-                      Telefon
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      placeholder="Telefon"
-                      required
-                      className="border border-primary/30 rounded-sm px-2 py-1 w-full focus:outline-primary"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="sr-only">
-                      E-mail
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="E-mail"
-                      required
-                      className="border border-primary/30 rounded-sm px-2 py-1 w-full focus:outline-primary"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="purpose" className="sr-only">
-                      Cel kontaktu
-                    </label>
-                    <textarea
-                      id="purpose"
-                      name="purpose"
-                      placeholder="Cel kontaktu"
-                      rows={4}
-                      required
-                      className="border border-primary/30 rounded-sm px-2 py-1 w-full focus:outline-primary"
-                    />
-                  </div>
-
-                  <div className="flex gap-1 items-center ">
-                    <input
-                      type="checkbox"
-                      id="consent"
-                      name="consent"
-                      required
-                      className="accent-primary cursor-pointer"
-                    />
-                    <label
-                      className=" select-none text-sm cursor-pointer"
-                      htmlFor="consent"
-                    >
-                      Wyrażam zgodę na przetwarzanie moich danych osobowych
-                    </label>
-                  </div>
-
-                  <div className="flex justify-center">
-                    <button className="btn py-2" type="submit">
-                      Wyślij
-                    </button>
-                  </div>
-                </fieldset>
-              </form>
-            </div>
+            <ContactForm />
           </section>
           {/* Mapa */}
           <div className="w-full h-100 md:h-120 m-10 rounded-2xl overflow-hidden">

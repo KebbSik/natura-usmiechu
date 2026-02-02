@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Header from "../components/Header";
-import Cta from "../components/servieces/Cta";
+import Cta from "../components/Cta";
 
 const OfertaLayout = ({ children }: { children: ReactNode }) => {
   return (

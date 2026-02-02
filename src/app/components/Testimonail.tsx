@@ -1,3 +1,5 @@
+import AnimatedSection from "./AnimatedSection";
+
 const testimonials = [
   {
     title: "Dostępność",
@@ -32,19 +34,16 @@ const Testimonials = () => {
     >
       <div className="container relative z-5">
         <div className="flex flex-col gap-5">
-          <header
-            className="
-            mb-8 h-1/2 
-            
-            "
-          >
-            <h2 className="text-primary">Dlaczego Natura Uśmiechu ?</h2>
-            <p className="text-muted mt-2">
-              Łączymy wiedzę, doświadczenie i nowoczesne technologie, aby
-              zapewnić leczenie na najwyższym poziomie. Każdy zabieg planujemy z
-              dbałością o detale i długofalowe efekty.
-            </p>
-          </header>
+          <AnimatedSection range={40} direction="left">
+            <header className="mb-8 h-1/2">
+              <h2 className="text-primary">Dlaczego Natura Uśmiechu ?</h2>
+              <p className="text-muted mt-2">
+                Łączymy wiedzę, doświadczenie i nowoczesne technologie, aby
+                zapewnić leczenie na najwyższym poziomie. Każdy zabieg planujemy
+                z dbałością o detale i długofalowe efekty.
+              </p>
+            </header>
+          </AnimatedSection>
 
           <ul
             className="
@@ -57,9 +56,14 @@ const Testimonials = () => {
           "
           >
             {testimonials.map((item, index) => (
-              <li
+              <AnimatedSection
                 key={index}
-                className="
+                range={30}
+                direction="left"
+                delay={0.4 * index}
+              >
+                <li
+                  className="
                 mx-auto
                 testimonial-card
                 min-w-[75%]
@@ -74,12 +78,13 @@ const Testimonials = () => {
                 bg-[position:calc(100%-15px)_calc(100%-15px)]
                 bg-[length:90px_90px]
               "
-                style={{ backgroundImage: `url(${item.bgImage})` }}
-              >
-                <h4 className="font-medium text-primary">{item.title}</h4>
-                <hr className="mt-3 mb-6 border-t border-primary" />
-                <p className="mb-4 ">“{item.text}”</p>
-              </li>
+                  style={{ backgroundImage: `url(${item.bgImage})` }}
+                >
+                  <h4 className="font-medium text-primary">{item.title}</h4>
+                  <hr className="mt-3 mb-6 border-t border-primary" />
+                  <p className="mb-4 italic">“{item.text}”</p>
+                </li>
+              </AnimatedSection>
             ))}
           </ul>
         </div>

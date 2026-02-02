@@ -61,23 +61,23 @@ const SvgComponent = ({
     <path
       d="M19.5035 36.4963C27.7141 42.5799 32.6065 43.7217 42.5035 36.4963"
       stroke="currentColor"
-      stroke-width="3"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M40.5035 33.2132C41.1761 36.1559 42.5471 36.8679 45.7425 37.4325"
       stroke="currentColor"
-      stroke-width="3"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M15.5035 37.9941C18.5205 37.894 19.4804 36.6835 20.6429 33.6539"
       stroke="currentColor"
-      stroke-width="3"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

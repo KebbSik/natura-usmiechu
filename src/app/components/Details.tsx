@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
-
+import AnimatedSection from "./AnimatedSection";
+import { motion } from "motion/react";
 const items = [
   {
     header: "Kompleksowa opieka w jednym miejscu",
@@ -139,13 +141,7 @@ const rotationMap: Record<number, string> = {
 
 const Details = () => {
   return (
-    <section
-      className="
-      relative
-      py-0
-      
-      "
-    >
+    <section className="relative py-0">
       <div className="relative  z-5 mx-0 w-full">
         {/* CONTENT */}
         <div className="flex flex-col gap-8 pb-10 md:pb-0">
@@ -161,21 +157,35 @@ const Details = () => {
                   className={`flex flex-col ${imageOnLeft ? "md:flex-row" : "md:flex-row-reverse"}  gap-6 items-center`}
                 >
                   {/* OBRAZ */}
-                  <div className="relative w-full md:w-2/5 md:h-auto  h-84 md:aspect-square">
-                    <Image
-                      src={item.image}
-                      alt={item.alt}
-                      fill
-                      className="object-cover"
-                    />
+                  <div className="relative w-full md:w-2/5 h-84 md:h-auto  md:aspect-square  overflow-hidden">
+                    <motion.div
+                      initial={{ opacity: 0, x: imageOnLeft ? -50 : 50 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, margin: "-20% 0px" }}
+                      transition={{ duration: 0.6, ease: "easeOut" }}
+                      className="relative w-full h-full"
+                    >
+                      <Image
+                        src={item.image}
+                        alt={item.alt}
+                        fill
+                        className="object-cover"
+                        priority={index === 0}
+                      />
+                    </motion.div>
                   </div>
 
                   {/* TEKST */}
                   <div className="w-full md:w-3/5 flex p-5 md:p-0 md:justify-center md:items-center ">
-                    <div className="flex flex-col max-w-120 gap-5 mx-auto">
-                      <h3 className="text-primary">{item.header}</h3>
-                      <p className="text-left">{item.text}</p>
-                    </div>
+                    <AnimatedSection
+                      range={40}
+                      direction={imageOnLeft ? "right" : "left"}
+                    >
+                      <div className="flex flex-col max-w-120 gap-5 mx-auto">
+                        <h3 className="text-primary">{item.header}</h3>
+                        <p className="text-left">{item.text}</p>
+                      </div>
+                    </AnimatedSection>
                   </div>
                 </div>
               </article>
