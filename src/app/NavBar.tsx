@@ -52,14 +52,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
-  // Prevent scroll
-  // useEffect(() => {
-  //   document.body.style.overflow = open ? "hidden" : "";
-
-  //   return () => {
-  //     document.body.style.overflow = "";
-  //   };
-  // }, [open]);
 
   // Navbar resize hook
   useEffect(() => {
@@ -101,13 +93,7 @@ export default function Navbar() {
           className={`${
             scrolled ? " text-primary" : open ? "text-primary" : "text-white"
           }`}
-
-          // className={`${
-          //   scrolled ? " text-black" : open ? "text-black" : "text-white"
-          // }`}
         >
-          {/* <Logo width={170} height={100} /> */}
-          {/* <Logo width={200} height={100} /> */}
           <div className="w-40  md:w-50 md:h-25  flex items-center">
             <Logo width="100%" height="100" />
           </div>

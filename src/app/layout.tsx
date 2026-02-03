@@ -4,6 +4,10 @@ import "./globals.css";
 import NavBar from "@/app/NavBar";
 import Footer from "./Footer";
 
+import { CookieConsentProvider } from "@/app/context/CookieConsentContext";
+import CookieBanner from "@/app/components/cookies/CookieBanner";
+import GoogleTags from "@/app/components/analytics/GoogleTags";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,11 +29,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pl">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <NavBar />
-        <main>{children}</main>
-        <Footer />
+        <CookieConsentProvider>
+          <GoogleTags />
+          <NavBar />
+          <main>{children}</main>
+          <Footer />
+          <CookieBanner />
+        </CookieConsentProvider>
       </body>
     </html>
   );

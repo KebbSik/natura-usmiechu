@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
@@ -6,8 +8,11 @@ import PinIcon from "./components/svgs/PinIcon";
 import PhoneIcon from "./components/svgs/PhoneIcon";
 import Logo from "./components/svgs/Logo";
 import contactData from "./contactData";
+import { clearConsent } from "./lib/cookies";
+import { useCookieConsent } from "./context/CookieConsentContext";
 
 const Footer = () => {
+  const { resetConsent } = useCookieConsent();
   return (
     <footer className="   bg-footer pt-8 pb-2">
       <div className="container">
@@ -17,8 +22,6 @@ const Footer = () => {
             <div className="w-40  md:w-50 md:h-25  py-5 flex items-center">
               <Logo width="100%" height="100" />
             </div>
-            {/* <Logo width={170} height={100} /> */}
-
             {/*  Social media  */}
             <nav aria-label="Social media">
               <ul className="flex justify-center items-center gap-2">
@@ -51,10 +54,7 @@ const Footer = () => {
                     />
                   </a>
                 </li>
-                <li
-                  className="bg-social hover:bg-social/90 rounded-lg icon-size flex justify-center items-center
-            "
-                >
+                <li className="bg-social hover:bg-social/90 rounded-lg icon-size flex justify-center items-center">
                   <a
                     href="https://www.instagram.com/natura_usmiechu/"
                     aria-label="instagram"
@@ -98,10 +98,17 @@ const Footer = () => {
           </section>
         </div>
         {/* Copyrights */}
-        <section className="w-full mt-5">
+        <section className="w-full mt-5 flex flex-col items-center gap-2">
           <p className="text-wrap text-center text-xs text-gray-500">
             © Copyright 2025 naturausmiechu.pl Created by Kevin Sarfo
           </p>
+
+          <button
+            onClick={resetConsent}
+            className="text-xs text-gray-400 underline hover:text-gray-700 cursor-pointer"
+          >
+            Zmień ustawienia cookies
+          </button>
         </section>
       </div>
     </footer>
