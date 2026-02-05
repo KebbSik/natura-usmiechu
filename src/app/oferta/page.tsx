@@ -1,7 +1,5 @@
-import React from "react";
 import Header from "../components/Header";
 import Link from "next/link";
-import Image from "next/image";
 import Title from "../components/Title";
 import ZachoSVG from "../components/svgs/services/ZachoSVG";
 import ChirurgiaSVG from "../components/svgs/services/ChirurgiaSVG";
@@ -11,44 +9,6 @@ import OrtoSVG from "../components/svgs/services/OrtoSVG";
 import PerioSVG from "../components/svgs/services/PerioSVG";
 import ImplantSVG from "../components/svgs/services/ImplantSVG";
 import AnimatedSection from "../components/AnimatedSection";
-
-const Categories = [
-  {
-    name: "Stomatologia zachowawcza",
-    src: "/categories/cat1.svg",
-    link: "/oferta/zachowawcza",
-  },
-  {
-    name: "Implantologia",
-    src: "/categories/cat1.svg",
-    link: "/oferta/implantologia",
-  },
-  {
-    name: "Chirurgia stomatologiczna",
-    src: "/categories/cat1.svg",
-    link: "/oferta/chirurgia",
-  },
-  {
-    name: "Protetyka",
-    src: "/categories/cat1.svg",
-    link: "/oferta/protetyka",
-  },
-  {
-    name: "Ortodoncja",
-    src: "/categories/cat1.svg",
-    link: "/oferta/ortodoncja",
-  },
-  {
-    name: "Periodontologia",
-    src: "/categories/cat1.svg",
-    link: "/oferta/periodontologia",
-  },
-  {
-    name: "Radiologia",
-    src: "/categories/cat1.svg",
-    link: "/oferta/radiologia",
-  },
-];
 
 const data = {
   heading: "Zadbaj o zdrowy i piękny uśmiech",
@@ -87,7 +47,6 @@ const Offer = () => {
       <section className="container mb-10">
         <div className="flex flex-col items-center px-3">
           <Title heading={data.heading} description={data.paragraph}></Title>
-          {/* To jest kontener na Linki do podstron oferty */}
           <AnimatedSection direction="bottom" range={30}>
             <div className="flex flex-wrap p-5 gap-2 sm:gap-5  lg:gap-10 max-w-240 justify-center  text-primary">
               <Link

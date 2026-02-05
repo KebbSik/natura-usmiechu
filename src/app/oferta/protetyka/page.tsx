@@ -1,14 +1,6 @@
 import Header from "@/app/components/Header";
-import GridList from "@/app/components/servieces/GridList";
 import GridListSm from "@/app/components/servieces/GridListSm";
 import MediaSection from "@/app/components/servieces/MediaSection";
-import Title from "@/app/components/Title";
-import React from "react";
-
-const data = {
-  heading: "Protetyka",
-  paragraph: "Opis protetyki",
-};
 
 const Protetyka = () => {
   return (

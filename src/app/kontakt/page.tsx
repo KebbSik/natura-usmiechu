@@ -1,10 +1,8 @@
-import React from "react";
 import Header from "../components/Header";
 import Title from "../components/Title";
 import PhoneIcon from "../components/svgs/PhoneIcon";
 import EnvelopeIcon from "../components/svgs/EnvelopeIcon";
 import PinIcon from "../components/svgs/PinIcon";
-
 import ContactForm from "../components/ContactForm";
 import { getContactInfo } from "../lib/getContactInfo";
 
@@ -37,7 +35,6 @@ const Contact = async () => {
         }}
       />
       <div>
-        {/* <Header imageUrl="headers/header.png">Kontakt</Header> */}
         <Header objectFit="center_20%" imageUrl="/photos/v_19.avif">
           Kontakt
         </Header>
@@ -51,7 +48,6 @@ const Contact = async () => {
                 <section>
                   <address className="flex not-italic">
                     <ul className="flex flex-col gap-7 items-center md:items-start">
-                      {/* <li className="contents"> */}
                       <li className="flex gap-3 items-center">
                         <PhoneIcon
                           className="text-primary w-6"
@@ -68,7 +64,6 @@ const Contact = async () => {
                         </div>
                       </li>
 
-                      {/* <li className="contents"> */}
                       <li className="flex gap-3 items-center">
                         <EnvelopeIcon
                           className="text-primary w-6"

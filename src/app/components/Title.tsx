@@ -1,5 +1,3 @@
-import Svg from "./svgs/PhoneIcon";
-
 type TitleProps = {
   heading: string;
   description?: string;

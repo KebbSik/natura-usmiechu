@@ -2,13 +2,6 @@ import Header from "@/app/components/Header";
 import Cards from "@/app/components/servieces/Cards";
 import MediaSection from "@/app/components/servieces/MediaSection";
 import MediaText from "@/app/components/servieces/MediaText";
-import Title from "@/app/components/Title";
-import React from "react";
-
-const data = {
-  heading: "Radiologia",
-  paragraph: "Opis radiologii",
-};
 
 const Radiologia = () => {
   return (

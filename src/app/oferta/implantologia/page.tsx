@@ -2,13 +2,7 @@ import Header from "@/app/components/Header";
 import Cards from "@/app/components/servieces/Cards";
 import MediaSection from "@/app/components/servieces/MediaSection";
 import Steps from "@/app/components/servieces/Steps";
-import Title from "@/app/components/Title";
-import React from "react";
 
-const data = {
-  heading: "Implantologia",
-  paragraph: "Opis implantologii",
-};
 const Implantologia = () => {
   return (
     <>

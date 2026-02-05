@@ -5,7 +5,6 @@ import PinIcon from "../components/svgs/PinIcon";
 import PhoneIcon from "../components/svgs/PhoneIcon";
 import Logo from "../components/svgs/Logo";
 import { useCookieConsent } from "../context/CookieConsentContext";
-import { getContactInfo } from "../lib/getContactInfo";
 import { ContactInfo } from "../types/contact";
 
 interface Props {

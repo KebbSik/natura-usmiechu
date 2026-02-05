@@ -20,7 +20,6 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    // <section className="section-padding  ">
     <section
       className="
       section-padding 

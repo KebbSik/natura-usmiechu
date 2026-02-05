@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import Logo from "./components/svgs/Logo";
 import Burger from "./components/svgs/Burger";
 import { ThemeToggle } from "./components/ThemeToggle";
@@ -133,7 +132,7 @@ export default function Navbar() {
             </li>
 
             <li className="relative group">
-              {/* LINK GŁÓWNY */}
+              {/* Oferta Link */}
               <Link
                 href="/oferta"
                 className="inline-flex items-center px-4 py-2 hover:bg-white/20  rounded-2xl"
@@ -144,7 +143,7 @@ export default function Navbar() {
                 </svg>
               </Link>
 
-              {/* DROPDOWN */}
+              {/* Dropdown */}
               <div
                 className="
                   absolute left-0 top-full

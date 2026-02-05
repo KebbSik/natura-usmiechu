@@ -2,6 +2,7 @@
 import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
 import { motion } from "motion/react";
+
 const items = [
   {
     header: "Kompleksowa opieka w jednym miejscu",

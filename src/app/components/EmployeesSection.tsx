@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
 import { motion } from "motion/react";

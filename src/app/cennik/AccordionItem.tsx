@@ -8,11 +8,6 @@ interface Props {
   onToggle: () => void;
 }
 
-// type PriceItem = {
-//   name: string;
-//   price: string;
-// };
-
 const AccordionItem = ({
   title,
   content,

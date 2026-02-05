@@ -1,7 +1,4 @@
-import { title } from "process";
-import React from "react";
 import servicesProps from "@/app/components/servieces/servicesProps";
-import { promises } from "dns";
 import AnimatedSection from "../AnimatedSection";
 
 interface StepElement {

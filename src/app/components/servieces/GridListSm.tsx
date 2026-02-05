@@ -1,4 +1,3 @@
-import React from "react";
 import servicesProps from "@/app/components/servieces/servicesProps";
 import AnimatedSection from "../AnimatedSection";
 

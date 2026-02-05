@@ -1,6 +1,4 @@
 import LoadingMark from "./components/svgs/LoadingMark";
-import Logo from "./components/svgs/Logo";
-import Mark from "./components/svgs/Mark";
 
 export default function Loading() {
   return (

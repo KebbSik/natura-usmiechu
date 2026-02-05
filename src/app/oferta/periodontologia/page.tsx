@@ -1,12 +1,5 @@
 import Header from "@/app/components/Header";
 import MediaSection from "@/app/components/servieces/MediaSection";
-import Title from "@/app/components/Title";
-import React from "react";
-
-const data = {
-  heading: "Periodontologia",
-  paragraph: "Opis periodontologii",
-};
 
 const Periodontologia = () => {
   return (

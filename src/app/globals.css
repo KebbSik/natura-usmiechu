@@ -81,10 +81,6 @@ body {
     @apply text-sm;
   }
 
-  a {
-    /* @apply text-black; */
-  }
-
   button {
     @apply font-medium
            text-sm md:text-base

@@ -1,12 +1,6 @@
 import Header from "@/app/components/Header";
 import MediaSection from "@/app/components/servieces/MediaSection";
-import Cards from "@/app/components/servieces/Cards";
-import GridList from "@/app/components/servieces/GridList";
 import GridListImg from "@/app/components/servieces/GridListImg";
-import Steps from "@/app/components/servieces/Steps";
-import Title from "@/app/components/Title";
-import Link from "next/link";
-import React from "react";
 import MediaText from "@/app/components/servieces/MediaText";
 
 const Zachowawcza = () => {

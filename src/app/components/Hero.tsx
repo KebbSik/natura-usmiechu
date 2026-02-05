@@ -42,15 +42,13 @@ const Hero = () => {
 
       <div className=" h-[50vh] md:h-[65vh] w-full relative">
         <Image
-          // src="/images/Hero_img.png"
-          // src="/photos/v_19.avif"
           src="/photos/v_18.avif"
           alt="hero_img"
           fill
           className="object-cover object-top"
           priority
         />
-        {/* <div className="bg-primary/30 text-white relative w-full h-full flex-center "> */}
+
         <div className=" text-white relative w-full h-full flex-center ">
           <h2 className="text-center md:text-left ">
             <AnimatedSection direction="top" range={40}>

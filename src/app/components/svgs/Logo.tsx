@@ -11,8 +11,6 @@ const SvgComponent = ({
   filled?: boolean;
 }) => (
   <svg
-    // width={width}
-    // height={height}
     viewBox="0 0 478 126"
     fill={filled ? "currentColor" : "none"}
     stroke="currentColor"

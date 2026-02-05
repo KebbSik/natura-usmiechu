@@ -1,14 +1,11 @@
-import React from "react";
 import Header from "../components/Header";
 import Title from "../components/Title";
 import EmployeesSection from "../components/EmployeesSection";
 import Image from "next/image";
-import VisitUs from "../components/VisitUs";
 import Sinus from "../components/svgs/Sinus";
 import Cta from "../components/Cta";
 import AnimatedSection from "../components/AnimatedSection";
 import { getEmployees } from "../lib/getEmployees";
-import { div } from "motion/react-client";
 
 const data = {
   heading: "Poznajmy się bliżej",
@@ -85,7 +82,6 @@ const AboutUs = async () => {
           <Sinus />
 
           <EmployeesSection employees={employees}></EmployeesSection>
-          {/* <EmployeesSection></EmployeesSection> */}
         </div>
         <Cta />
       </section>
