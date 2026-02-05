@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/app/NavBar";
-import Footer from "./Footer";
+import Footer from "./footer/Footer";
 
 import { CookieConsentProvider } from "@/app/context/CookieConsentContext";
 import CookieBanner from "@/app/components/cookies/CookieBanner";

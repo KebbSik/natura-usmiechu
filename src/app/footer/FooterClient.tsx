@@ -1,17 +1,37 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
-import React from "react";
-import EnvelopeIcon from "./components/svgs/EnvelopeIcon";
-import PinIcon from "./components/svgs/PinIcon";
-import PhoneIcon from "./components/svgs/PhoneIcon";
-import Logo from "./components/svgs/Logo";
-import contactData from "./contactData";
-import { clearConsent } from "./lib/cookies";
-import { useCookieConsent } from "./context/CookieConsentContext";
+import EnvelopeIcon from "../components/svgs/EnvelopeIcon";
+import PinIcon from "../components/svgs/PinIcon";
+import PhoneIcon from "../components/svgs/PhoneIcon";
+import Logo from "../components/svgs/Logo";
+import { useCookieConsent } from "../context/CookieConsentContext";
+import { getContactInfo } from "../lib/getContactInfo";
+import { ContactInfo } from "../types/contact";
 
-const Footer = () => {
+interface Props {
+  contactInfo: ContactInfo;
+}
+
+const contactData = {
+  phone: "+48 509 838 095",
+  email: "info@naturausmiechu.pl",
+  address: {
+    line1: "Międzygwiezdna 2/5",
+    line2: " 80-299 Gdańsk",
+  },
+};
+
+function toTelHref(phone: string): string {
+  const cleaned = phone.replace(/[^\d+]/g, "");
+
+  if (!cleaned.startsWith("+") && cleaned.length === 9) {
+    return `tel:+48${cleaned}`;
+  }
+
+  return `tel:${cleaned}`;
+}
+
+const FooterClient = ({ contactInfo }: Props) => {
   const { resetConsent } = useCookieConsent();
   return (
     <footer className="   bg-footer pt-8 pb-2">
@@ -76,21 +96,33 @@ const Footer = () => {
               <ul className="grid  grid-cols-[auto_1fr] gap-x-2 gap-y-2 items-center">
                 <li className="contents">
                   <PhoneIcon className="text-black" width={24} height={24} />{" "}
-                  <a href="tel:+48123123123">{contactData.phone}</a>
+                  <div className="flex flex-col">
+                    {contactInfo.telefon.map((tel, index) => (
+                      <a key={index} href={toTelHref(tel)}>
+                        {tel}
+                      </a>
+                    ))}
+                  </div>
                 </li>
 
                 <li className="contents">
                   <EnvelopeIcon className="text-black" width={24} height={24} />
 
-                  <a href="mailto:kontakt@firma.pl">{contactData.email}</a>
+                  <div className="flex flex-col">
+                    {contactInfo.email.map((mail, index) => (
+                      <a key={index} href={`mailto:${mail}`}>
+                        {mail}
+                      </a>
+                    ))}
+                  </div>
                 </li>
 
                 <li className="contents">
                   <PinIcon className="text-black" width={24} height={24} />
                   <span>
-                    {contactData.address.line1}
+                    {contactInfo.ulica}
                     <br />
-                    {contactData.address.line2}
+                    {contactInfo.miejscowoscIKod}
                   </span>
                 </li>
               </ul>
@@ -115,4 +147,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterClient;

@@ -58,6 +58,29 @@ const data = {
 const Offer = () => {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Strona główna",
+                item: "https://naturausmiechu.pl",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Oferta",
+                item: "https://naturausmiechu.pl/oferta",
+              },
+            ],
+          }),
+        }}
+      />
       <Header objectFit="center-50%" imageUrl="/photos/v_14.avif">
         Oferta
       </Header>
