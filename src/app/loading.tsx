@@ -1,4 +1,4 @@
-import LoadingMark from "./src/app/components/svgs/LoadingMark";
+import LoadingMark from "./components/svgs/LoadingMark";
 
 export default function Loading() {
   return (
