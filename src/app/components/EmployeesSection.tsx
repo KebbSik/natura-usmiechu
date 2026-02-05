@@ -38,6 +38,7 @@ const EmployeesSection = ({ employees }: EmployeesSectionProps) => {
                 alt={employee.imie}
                 className="object-cover"
                 fill
+                sizes="(max-width: 360px) 100vw"
               />
             </motion.div>
 
