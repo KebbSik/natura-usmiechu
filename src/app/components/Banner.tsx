@@ -19,11 +19,11 @@ const Banner = () => {
 
   "
     >
-      {/* OVERLAY – tylko mobile */}
+      {/* OVERLAY – mobile */}
       <div className="absolute inset-0 bg-primary/40 md:hidden" />
       <div className="container relative z-10">
         <div className="grid items-center justify-center gap-12 md:grid-cols-2">
-          {/* LEWA STRONA – TREŚĆ */}
+          {/* left side – content */}
           <AnimatedSection direction="bottom" range={40}>
             <article className="flex flex-col gap-6 text-white md:text-inherit">
               <header className="text-center md:text-start text-white md:text-primary">
@@ -42,10 +42,9 @@ const Banner = () => {
             </article>
           </AnimatedSection>
           <AnimatedSection direction="bottom" range={40}>
-            {/* PRAWA STRONA – OBRAZ (desktop only) */}
+            {/* right site – img (desktop only) */}
             <figure className="relative hidden md:block h-100 ">
               <Image
-                // src="/images/banner.png"
                 src="/photos/v_26.avif"
                 alt="Gabinet Natura Uśmiechu"
                 fill
