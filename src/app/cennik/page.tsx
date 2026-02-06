@@ -19,8 +19,8 @@ const PriceList = async () => {
   //     </div>
   //   );
   // }
-  // return <PricelistClient pricing={pricing} />;
-  return <div>Pricelist</div>;
+  return <PricelistClient pricing={pricing} />;
+  // return <div>Pricelist</div>;
 };
 
 export default PriceList;
