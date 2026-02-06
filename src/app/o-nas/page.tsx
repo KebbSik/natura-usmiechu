@@ -41,7 +41,7 @@ const AboutUs = async () => {
         }}
       />
       <section>
-        <Header imageUrl="/photos/11.avif" objectFit="center_25%">
+        <Header imageUrl="/photos/11.avif" objectFit="center 25%">
           O nas
         </Header>
         <div className="container ">

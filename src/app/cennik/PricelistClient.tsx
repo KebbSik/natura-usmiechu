@@ -39,7 +39,7 @@ const PricelistClient = ({ pricing }: Props) => {
 
   return (
     <section className="min-h-screen">
-      <Header objectFit="center_50%" imageUrl="/photos/v_12.avif">
+      <Header objectFit="center" imageUrl="/photos/v_12.avif">
         Cennik
       </Header>
       <div className="container mb-10">

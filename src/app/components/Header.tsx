@@ -12,7 +12,8 @@ const Header = ({ imageUrl, children, objectFit }: Props) => {
     <header className="w-full h-60 md:h-100  relative">
       <div>
         <Image
-          className={`opacity-100 object-cover object-[${[objectFit]}]`}
+          className="opacity-100 object-cover"
+          style={{ objectPosition: objectFit }}
           src={imageUrl}
           alt="header"
           fill

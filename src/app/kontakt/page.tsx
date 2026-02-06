@@ -35,7 +35,7 @@ const Contact = async () => {
         }}
       />
       <div>
-        <Header objectFit="center_20%" imageUrl="/photos/v_19.avif">
+        <Header objectFit="center" imageUrl="/photos/v_19.avif">
           Kontakt
         </Header>
 

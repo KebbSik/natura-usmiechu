@@ -5,7 +5,7 @@ import MediaSection from "@/app/components/servieces/MediaSection";
 const Chirurgia = () => {
   return (
     <>
-      <Header objectFit="center-50%" imageUrl="/photos/v_14.avif">
+      <Header objectFit="center" imageUrl="/photos/v_14.avif">
         Chirurgia
       </Header>
       <MediaSection
