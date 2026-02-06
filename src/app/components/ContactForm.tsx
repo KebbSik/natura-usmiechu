@@ -29,7 +29,7 @@ const ContactForm = () => {
       }),
     });
 
-    setSent(true); // ⬅️ KLUCZ
+    setSent(true);
   };
 
   // Success
