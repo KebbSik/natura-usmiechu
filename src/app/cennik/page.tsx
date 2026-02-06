@@ -12,13 +12,13 @@ const PriceList = async () => {
   // await delay(50000);
   const pricing = await getPricing();
 
-  // if (!pricing || pricing.length === 0) {
-  //   return (
-  //     <div className="py-12 text-center text-muted">
-  //       Cennik chwilowo niedostępny
-  //     </div>
-  //   );
-  // }
+  if (!pricing || pricing.length === 0) {
+    return (
+      <div className="py-12 text-center text-muted">
+        Cennik chwilowo niedostępny
+      </div>
+    );
+  }
   return <PricelistClient pricing={pricing} />;
   // return <div>Pricelist</div>;
 };
