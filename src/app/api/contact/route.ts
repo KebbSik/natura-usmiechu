@@ -59,6 +59,7 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: `"Formularz kontaktowy" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_TO,
+      replyTo: data.email,
       subject: "Nowa wiadomość z formularza",
       html: `
         <h2>Nowa wiadomość</h2>
