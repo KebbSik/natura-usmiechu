@@ -1,5 +1,6 @@
 "use server";
 
+import { div } from "motion/react-client";
 import { getPricing } from "../lib/getPricing";
 import PricelistClient from "./PricelistClient";
 
@@ -9,8 +10,17 @@ import PricelistClient from "./PricelistClient";
 const PriceList = async () => {
   // Just to show loader
   // await delay(50000);
-  const pricing = await getPricing();
-  return <PricelistClient pricing={pricing} />;
+  // const pricing = await getPricing();
+
+  // if (!pricing || pricing.length === 0) {
+  //   return (
+  //     <div className="py-12 text-center text-muted">
+  //       Cennik chwilowo niedostępny
+  //     </div>
+  //   );
+  // }
+  // return <PricelistClient pricing={pricing} />;
+  return <div>Cennik</div>;
 };
 
 export default PriceList;

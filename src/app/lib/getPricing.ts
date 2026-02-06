@@ -7,5 +7,5 @@ export async function getPricing() {
     query: PRICING_QUERY,
   });
 
-  return data.cennikKat;
+  return data?.cennikKat ?? [];
 }

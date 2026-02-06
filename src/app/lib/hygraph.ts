@@ -32,5 +32,10 @@ export async function fetchHygraph<T>({
 
   const json = await res.json();
 
-  return json.data;
+  // if (!json || !json.data) {
+  //   console.error("Hygraph returned no data", json);
+  //   return null as T;
+  // }
+
+  return json.data ?? null;
 }
