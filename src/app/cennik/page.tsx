@@ -10,7 +10,7 @@ import PricelistClient from "./PricelistClient";
 const PriceList = async () => {
   // Just to show loader
   // await delay(50000);
-  // const pricing = await getPricing();
+  const pricing = await getPricing();
 
   // if (!pricing || pricing.length === 0) {
   //   return (
