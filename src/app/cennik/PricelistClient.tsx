@@ -46,20 +46,22 @@ const PricelistClient = ({ pricing }: Props) => {
         <div className="flex flex-col items-center px-3 ">
           <Title heading={"Zapoznaj się z naszym cennikiem"}></Title>
           <div className="flex flex-col gap-1  mx-auto py-10">
-            {pricing.map((item) => {
+            {pricing.map((item, index) => {
               // console.log(item);
+              const id = item.slug ?? `pricing-${index}`;
+
               return (
                 <div
-                  key={item.slug}
+                  key={id}
                   ref={(el) => {
-                    itemRefs.current[item.slug] = el;
+                    itemRefs.current[id] = el;
                   }}
                 >
                   <AccordionItem
                     title={item.nazwa}
                     content={item.cennikUsluga}
-                    isExpended={expandedId === item.slug ? true : false}
-                    onToggle={() => toggleExpand(item.slug)}
+                    isExpended={expandedId === id ? true : false}
+                    onToggle={() => toggleExpand(id)}
                   />
                 </div>
               );
