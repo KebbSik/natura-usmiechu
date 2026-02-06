@@ -57,12 +57,13 @@ const PricelistClient = ({ pricing }: Props) => {
                     itemRefs.current[id] = el;
                   }}
                 >
-                  <AccordionItem
+                  {/* <AccordionItem
                     title={item.nazwa}
                     content={item.cennikUsluga}
                     isExpended={expandedId === id ? true : false}
                     onToggle={() => toggleExpand(id)}
-                  />
+                  /> */}
+                  test
                 </div>
               );
             })}
