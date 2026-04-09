@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import Header from "../components/Header";
+
+export const metadata: Metadata = {
+  title: "Oferta",
+};
 import Link from "next/link";
 import Title from "../components/Title";
 import ZachoSVG from "../components/svgs/services/ZachoSVG";

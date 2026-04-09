@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import Header from "@/app/components/Header";
+
+export const metadata: Metadata = {
+  title: "Ortodoncja",
+};
 import Cards from "@/app/components/servieces/Cards";
 import MediaSection from "@/app/components/servieces/MediaSection";
 import Steps from "@/app/components/servieces/Steps";

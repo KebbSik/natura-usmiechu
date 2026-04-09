@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import Header from "../components/Header";
+
+export const metadata: Metadata = {
+  title: "Kontakt",
+};
 import Title from "../components/Title";
 import PhoneIcon from "../components/svgs/PhoneIcon";
 import EnvelopeIcon from "../components/svgs/EnvelopeIcon";

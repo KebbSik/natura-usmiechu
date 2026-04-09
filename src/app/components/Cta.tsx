@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AnimatedSection from "./AnimatedSection";
 
 const bgImage = "/photos/v.avif";
@@ -26,12 +27,12 @@ const Cta = () => {
 
           <AnimatedSection direction="bottom" range={30}>
             <div className="inline-flex w-full mt-6 h-20 max-w-100">
-              <a
+              <Link
                 href="/kontakt"
-                className="inline-flex items-center justify-center w-full px-6 py-2 duration-300 rounded-lg bg-primary/95 text-xl text-white hover:bg-primary hover:scale-102      "
+                className="inline-flex items-center justify-center w-full px-6 py-2 duration-300 rounded-lg bg-primary/95 text-xl text-white hover:bg-primary hover:scale-102"
               >
                 Zarezerwuj termin
-              </a>
+              </Link>
             </div>
           </AnimatedSection>
         </div>

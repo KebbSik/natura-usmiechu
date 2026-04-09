@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import Header from "../components/Header";
+
+export const metadata: Metadata = {
+  title: "O nas",
+};
 import Title from "../components/Title";
 import EmployeesSection from "../components/EmployeesSection";
 import Image from "next/image";

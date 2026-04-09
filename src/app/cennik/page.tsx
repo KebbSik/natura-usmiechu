@@ -1,6 +1,9 @@
-"use server";
-
+import type { Metadata } from "next";
 import { div } from "motion/react-client";
+
+export const metadata: Metadata = {
+  title: "Cennik",
+};
 import { getPricing } from "../lib/getPricing";
 import PricelistClient from "./PricelistClient";
 

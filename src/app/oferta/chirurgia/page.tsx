@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import Header from "@/app/components/Header";
+
+export const metadata: Metadata = {
+  title: "Chirurgia",
+};
 import GridList from "@/app/components/servieces/GridList";
 import MediaSection from "@/app/components/servieces/MediaSection";
 

@@ -19,7 +19,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Natura Uśmiechu",
+  title: {
+    default: "Natura Uśmiechu",
+    template: "%s | Natura Uśmiechu",
+  },
   description:
     "Natura Uśmiechu - miejsce, w którym zdrowy i naturalny uśmiech jest priorytetem. Nowoczesna stomatologia i kompleksowa opieka.",
 };

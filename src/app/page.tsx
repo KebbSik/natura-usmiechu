@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import Hero from "./components/Hero";
+
+export const metadata: Metadata = {
+  title: { absolute: "Natura Uśmiechu" },
+};
 import Testimonials from "./components/Testimonail";
 import Details from "./components/Details";
 import Banner from "./components/Banner";
