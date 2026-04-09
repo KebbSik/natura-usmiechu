@@ -73,7 +73,7 @@ const Zachowawcza = () => {
             header: "Komfortowe leczenie w przyjaznej atmosferze",
             content:
               "Podczas leczenia szczególną uwagę zwracamy na komfort i poczucie bezpieczeństwa pacjenta. Każdy etap terapii jest dokładnie omawiany, a plan leczenia dopasowany do indywidualnych potrzeb. Korzystamy z nowoczesnych metod znieczulenia oraz sprawdzonych technologii, dzięki czemu leczenie przebiega sprawnie, bezboleśnie i w spokojnej atmosferze.",
-            imgUrl: "/photos/a_15.avif",
+            imgUrl: "/photos/v_25.avif",
           }}
           bg="bg-primary/10"
         />

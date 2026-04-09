@@ -35,7 +35,7 @@ const ContactForm = () => {
   // Success
   if (sent) {
     return (
-      <div className="flex flex-col items-center justify-center h-104 gap-4  text-center">
+      <div className="flex h-104 w-full flex-col items-center justify-center gap-4 text-center">
         <div className="rounded-sm border max-w-100 border-green-500/40 bg-green-50 px-4 py-3 text-green-700">
           Dziękujemy za przesłanie wiadomości. Skontaktujemy się z Tobą wkrótce.
         </div>
@@ -55,11 +55,11 @@ const ContactForm = () => {
 
   // Form
   return (
-    <div className="flex justify-center">
+    <div className="flex w-full justify-center">
       <form
         noValidate
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col  gap-2 md:min-w-100 max-w-130"
+        className="flex w-full max-w-none flex-col gap-2"
       >
         {/* honeypot */}
         <input
@@ -69,11 +69,50 @@ const ContactForm = () => {
           autoComplete="off"
           {...register("company")}
         />
+        <div className="mb-1 flex flex-col gap-4">
+          <div className="flex items-center gap-3">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-11 w-11 shrink-0 text-primary"
+              aria-hidden
+            >
+              <path
+                d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M14 2V8H20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M8 12H16M8 16H16M8 20H12"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+              />
+            </svg>
+            <h2 className="text-lg font-semibold text-primary">
+              Napisz do nas
+            </h2>
+          </div>
+          <p className="text-sm leading-relaxed text-primary/90">
+            Wypełnij formularz kontaktowy, a my odezwiemy się wkrótce.
+          </p>
+        </div>
         <div className="min-h-13.5">
           <input
             placeholder="Imię"
             {...register("name")}
-            className={`w-full border px-2 py-1 rounded-sm ${
+            className={`w-full border bg-white px-2 py-1 rounded-sm ${
               errors.name ? "border-red-400" : "border-primary/30"
             }`}
           />
@@ -85,7 +124,7 @@ const ContactForm = () => {
           <input
             placeholder="Telefon"
             {...register("phone")}
-            className={`w-full border px-2 py-1 rounded-sm ${
+            className={`w-full border bg-white px-2 py-1 rounded-sm ${
               errors.phone ? "border-red-400" : "border-primary/30"
             }`}
           />
@@ -99,7 +138,7 @@ const ContactForm = () => {
             type="email"
             placeholder="E-mail"
             {...register("email")}
-            className={`w-full border px-2 py-1 rounded-sm ${
+            className={`w-full border bg-white px-2 py-1 rounded-sm ${
               errors.email ? "border-red-400" : "border-primary/30"
             }`}
           />
@@ -112,7 +151,7 @@ const ContactForm = () => {
             rows={4}
             placeholder="Cel kontaktu"
             {...register("purpose")}
-            className={`w-full border px-2 py-1 rounded-sm ${
+            className={`w-full border bg-white px-2 py-1 rounded-sm ${
               errors.purpose ? "border-red-400" : "border-primary/30"
             }`}
           />

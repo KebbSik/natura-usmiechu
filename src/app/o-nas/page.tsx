@@ -70,11 +70,14 @@ const AboutUs = async () => {
                 <Image src={"/photos/g.avif"} alt={""} fill />
               </div>
               <p className=" flex w-full  bg-white border border-primary/10 md:bg-transparent md:border-0 p-5 rounded-md md:w-4/9   items-center md:p-0 md:pt-5">
-                W Naturze Uśmiechu tworzymy zespół specjalistów, których łączy
-                wspólny cel — troska o zdrowy, naturalnie piękny uśmiech każdego
-                pacjenta. Stawiamy na indywidualne podejście, empatię i
-                nowoczesne metody leczenia, aby każda wizyta przebiegała w
-                spokojnej, komfortowej atmosferze.
+                Dbamy nie tylko o skuteczność leczenia, ale także o dobre
+                samopoczucie naszych pacjentów na każdym etapie wizyty w naszym
+                gabinecie stomatologicznym. Korzystamy z nowoczesnych
+                technologii i sprawdzonych metod leczenia zębów, które pozwalają
+                osiągać trwałe i estetyczne efekty. Wierzymy, że zaufanie i
+                otwarta komunikacja są podstawą długotrwałej relacji, dlatego
+                każdy dentysta w naszym zespole dokładnie tłumaczy przebieg
+                leczenia i odpowiada na wszystkie pytania.
               </p>
             </article>
           </AnimatedSection>

@@ -6,6 +6,12 @@ import PinIcon from "../components/svgs/PinIcon";
 import ContactForm from "../components/ContactForm";
 import { getContactInfo } from "../lib/getContactInfo";
 
+const ZNANY_LEKARZ_PLACOWKA =
+  "https://www.znanylekarz.pl/placowki/natura-usmiechu-gabinet-stomatologiczny";
+
+const contactPanelClass =
+  "rounded-2xl border border-primary/25 bg-primary/5 p-6";
+
 const Contact = async () => {
   const contactInfo = await getContactInfo();
 
@@ -42,9 +48,9 @@ const Contact = async () => {
         <div className="container ">
           <div className="flex flex-col  items-center px-3">
             <Title heading={"Umów wizytę"}></Title>
-            <section className="w-full flex flex-col gap-10 md:flex-row justify-around">
-              <div className="flex flex-col justify-around items-center   gap-10">
-                {/* Dane kontaktowe */}
+            <section className="flex w-full flex-col gap-10">
+              {/* Wiersz 1: dane kontaktowe + social media */}
+              <div className="flex w-full flex-col items-center gap-8 md:flex-row md:items-center md:justify-center md:gap-12 lg:gap-20">
                 <section>
                   <address className="flex not-italic">
                     <ul className="flex flex-col gap-7 items-center md:items-start">
@@ -93,7 +99,6 @@ const Contact = async () => {
                     </ul>
                   </address>
                 </section>
-                {/* Social media */}
                 <nav aria-label="Social media">
                   <ul className="flex items-center gap-2">
                     <li className="">
@@ -111,20 +116,6 @@ const Contact = async () => {
                       </a>
                     </li>
 
-                    <li className=" rounded-lg ">
-                      <a
-                        href="https://www.znanylekarz.pl/placowki/natura-usmiechu-gabinet-stomatologiczny"
-                        aria-label="znanly lekarz"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          className="icon-size bg-primary hover:bg-primary/80 transition-all duration-200 rounded-lg p-1 "
-                          src="/icons/star.svg"
-                          alt=""
-                        />
-                      </a>
-                    </li>
                     <li className="bg-primary hover:bg-primary/80 transition-all duration-200   rounded-lg icon-size flex justify-center items-center">
                       <a
                         href="https://www.instagram.com/natura_usmiechu/"
@@ -140,8 +131,45 @@ const Contact = async () => {
                   </ul>
                 </nav>
               </div>
-              {/* Formularz */}
-              <ContactForm />
+
+              {/* Wiersz 2: ZnanyLekarz + formularz */}
+              <div className="flex w-full flex-col items-stretch gap-10 md:flex-row md:justify-center md:gap-10 lg:gap-14">
+                <aside
+                  className={`flex w-full flex-col gap-4 md:max-w-xs md:shrink-0 ${contactPanelClass}`}
+                >
+                  <div className="flex items-center gap-3">
+                    <svg
+                      viewBox="-5 -5 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-14 w-14 shrink-0 text-primary"
+                      aria-hidden
+                    >
+                      <path
+                        d="M12.7734 4.5C12.7734 3.67031 13.4437 3 14.2734 3H15.7734C16.6031 3 17.2734 3.67031 17.2734 4.5V11.1047L22.9922 7.80469C23.7094 7.39219 24.6281 7.63594 25.0406 8.35312L25.7906 9.65156C26.2031 10.3687 25.9594 11.2875 25.2422 11.7L19.5234 15L25.2422 18.3C25.9594 18.7125 26.2078 19.6312 25.7906 20.3484L25.0406 21.6469C24.6281 22.3641 23.7094 22.6125 22.9922 22.1953L17.2734 18.8953V25.5C17.2734 26.3297 16.6031 27 15.7734 27H14.2734C13.4437 27 12.7734 26.3297 12.7734 25.5V18.8953L7.05468 22.1953C6.33749 22.6078 5.41874 22.3641 5.00624 21.6469L4.25624 20.3484C3.84374 19.6312 4.08749 18.7125 4.80468 18.3L10.5234 15L4.80468 11.7C4.08749 11.2875 3.84374 10.3687 4.25624 9.65156L5.00624 8.35312C5.41874 7.63594 6.33749 7.39219 7.05468 7.80469L12.7734 11.1047V4.5Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <h2 className="text-lg font-semibold text-primary">
+                      Umów wizytę online
+                    </h2>
+                  </div>
+                  <p className="text-sm leading-relaxed text-primary/90">
+                    Wybierz dogodny termin w serwisie ZnanyLekarz.
+                  </p>
+                  <a
+                    href={ZNANY_LEKARZ_PLACOWKA}
+                    className="btn w-full justify-center text-center font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Zarezerwuj na ZnanyLekarz
+                  </a>
+                </aside>
+                <div className={`min-w-0 flex-1 ${contactPanelClass}`}>
+                  <ContactForm />
+                </div>
+              </div>
             </section>
             {/* Mapa */}
             <div className="w-full h-100 md:h-120 m-10 rounded-2xl overflow-hidden">

@@ -35,7 +35,7 @@ const Chirurgia = () => {
           header: "Komfortowe leczenie i opieka po zabiegu",
           content:
             "Podczas zabiegów chirurgicznych szczególną uwagę przykładamy do skutecznego znieczulenia oraz komfortu pacjenta. Każdy etap leczenia jest dokładnie omawiany, a po zabiegu pacjent otrzymuje jasne zalecenia dotyczące gojenia i dalszej pielęgnacji. Dzięki temu proces rekonwalescencji przebiega spokojnie, a pacjent czuje się bezpiecznie i pod stałą opieką specjalistów.",
-          imgUrl: "/photos/a_4.avif",
+          imgUrl: "/photos/a_18.avif",
         }}
         bg="bg-primary/10"
       />
